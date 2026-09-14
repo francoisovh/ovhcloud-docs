@@ -46,7 +46,7 @@ However, **you can absolutely install any other libraries on top of the list pro
 
 When you create a new custom action using the Data Platform Data Processing Engine you will certainly be connecting to external data sources and use a variety of file formats. **Data Platform possesses a pre-existing list of modules to handle both data formats & connector types inside your code**.
 
-The list of modules preinstalled by default includes primarily support for generic file format & other component of the platform (data warehouse & data store): mySQL, S3, CSV, XML, XLS, XLSX, JSON. Parquet file formats are not installed by default because of the size of the module (approximately 400 MB) which would add latency for the build of the workers.
+The list of modules preinstalled by default includes primarily support for generic file format & other component of the platform (data warehouse & data store): mySQL, S3<sup>1</sup>, CSV, XML, XLS, XLSX, JSON. Parquet file formats are not installed by default because of the size of the module (approximately 400 MB) which would add latency for the build of the workers.
 
 To install Data Platform modules for your custom actions you can either do it via the Custom action configuration GUI under the *Requirements* section. For instance, if you use the SDK functions to connect to an external Dropbox source but have not installed the Dropbox module, your code will throw an error unless you configure your custom action as below:
 
@@ -110,3 +110,5 @@ Ask questions, give your feedback and interact directly with the team building t
 If you need support with your OVHcloud services, create a request in our [Help Centre](/links/support-contact).
 
 Join our [community of users](/links/community).
+
+<sup>1</sup>: S3 is a trademark of Amazon Technologies, Inc. OVHcloud's service is not sponsored by, endorsed by, or otherwise affiliated with Amazon Technologies, Inc.

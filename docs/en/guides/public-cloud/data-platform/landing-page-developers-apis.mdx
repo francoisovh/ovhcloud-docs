@@ -16,7 +16,7 @@ The Data Platform APIs are the programmatic alternative to the interface, for bu
 **The complete Data Platform API is in development.** What this section documents today is [authentication](/guides/public-cloud/data-platform/developers-api-authentication): how to obtain a token by password or by API key credentials, and how to invalidate it. Endpoint references for the rest of the platform land here as they ship.
 :::
 
-Until then, two other routes cover most programmatic work. The [Custom Actions SDK](/guides/public-cloud/data-platform/landing-page-developers-python-sdk) reads and writes datasets, tables and buckets from inside a project's own compute. Project buckets speak S3, so any S3-compatible client works against them directly, as the [bucket access tutorial](/guides/public-cloud/data-platform/tutorials-bucket-s3-access) shows.
+Until then, two other routes cover most programmatic work. The [Custom Actions SDK](/guides/public-cloud/data-platform/landing-page-developers-python-sdk) reads and writes datasets, tables and buckets from inside a project's own compute. Project buckets speak S3<sup>1</sup>, so any S3-compatible client works against them directly, as the [bucket access tutorial](/guides/public-cloud/data-platform/tutorials-bucket-s3-access) shows.
 
 The conventions below apply to the authentication endpoints and to the API as it grows.
 
@@ -81,3 +81,5 @@ Ask questions, give your feedback and interact directly with the team building t
 If you need support with your OVHcloud services, create a request in our [Help Centre](/links/support-contact).
 
 Join our [community of users](/links/community).
+
+<sup>1</sup>: S3 is a trademark of Amazon Technologies, Inc. OVHcloud's service is not sponsored by, endorsed by, or otherwise affiliated with Amazon Technologies, Inc.

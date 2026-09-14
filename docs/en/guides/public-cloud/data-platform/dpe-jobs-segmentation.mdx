@@ -145,7 +145,7 @@ This segmentation option is only compatible with the following actions and sourc
 
 ### Bucket Size
 
-If your source contains a significant number of unique values whithin the attribute used for segmentation, it might lead to generating a multitude of small tasks and not be particularly beneficial to your action run time.
+If your source contains a significant number of unique values within the attribute used for segmentation, it might lead to generating a multitude of small tasks and not be particularly beneficial to your action run time.
 
 To avoid generating too many tasks, you can make each task manage several values of your segmentation attribute at once by using the “bucket size” option. Simply set a size for your bucket to decide how many values at a time you want your task to manage. Note that the default “bucket size” value is 1, that is:
 
@@ -194,7 +194,7 @@ This segmentation option is only compatible with the following actions and sourc
 
 | Action Types | Source Types |
 |          ---        |          ---          |
-| Load | **Files**: CSV Files, Excel Files; **Datastore**: Big Query, AWS S3; **Databases**: MySQL, PostgreSQL, SQLServer, Impala, Hive, BiqQuery, ElasticSearch, Cassandra, Redshift, Oracle, SQLServer |
+| Load | **Files**: CSV Files, Excel Files; **Datastore**: Big Query, AWS S3<sup>1</sup>; **Databases**: MySQL, PostgreSQL, SQLServer, Impala, Hive, BiqQuery, ElasticSearch, Cassandra, Redshift, Oracle, SQLServer |
 
 ### Configuration
 
@@ -335,3 +335,5 @@ Ask questions, give your feedback and interact directly with the team building t
 If you need support with your OVHcloud services, create a request in our [Help Centre](/links/support-contact).
 
 Join our [community of users](/links/community).
+
+<sup>1</sup>: S3 is a trademark of Amazon Technologies, Inc. OVHcloud's service is not sponsored by, endorsed by, or otherwise affiliated with Amazon Technologies, Inc.

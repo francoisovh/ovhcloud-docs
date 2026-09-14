@@ -574,7 +574,7 @@ Every Data Platform release since general availability, newest first. Releases f
 
 **Lakehouse Manager**
 
-- **SDK Update:** Added a new [`create_from_physical`](/guides/public-cloud/data-platform/developers-python-sdk-connect-dataset#create_from_physicaltable-dataset39default_dataset39-kwargs) method to create logical objects from existing physical tables.
+- **SDK Update:** Added a new [`create_from_physical`](/guides/public-cloud/data-platform/developers-python-sdk-connect-dataset#create_from_physicaltable-datasetdefault_dataset-kwargs) method to create logical objects from existing physical tables.
 - Improved stability for configuration imports by correctly setting table statuses.
 
 **Analytics Manager**
@@ -722,7 +722,7 @@ Every Data Platform release since general availability, newest first. Releases f
 - Resolved a WebSocket issue when multiple users accessed the same DPE
 - You can now add widgets directly without going through the edit menu
 - Updated DPE Notebooks interface for a smoother experience
-- S3-compatible storage now automatically lowercases the region field for consistency
+- S3<sup>1</sup>-compatible storage now automatically lowercases the region field for consistency
 
 **June 30, 2025**
 
@@ -897,3 +897,5 @@ Ask questions, give your feedback and interact directly with the team building t
 If you need support with your OVHcloud services, create a request in our [Help Centre](/links/support-contact).
 
 Join our [community of users](/links/community).
+
+<sup>1</sup>: S3 is a trademark of Amazon Technologies, Inc. OVHcloud's service is not sponsored by, endorsed by, or otherwise affiliated with Amazon Technologies, Inc.
