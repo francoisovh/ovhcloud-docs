@@ -23,8 +23,8 @@ Two paths to get the credentials, both supported:
 1. Go to [partners.shopify.com](https://partners.shopify.com) and sign in (free, no card required).
 2. Open the **Dev Dashboard**, click **Create app**, name it (e.g. `data-connector`).
 3. In the new app, go to **Versions** → **Create a new version**.
-4. Under **Access** → **Champs d'accès** (Access scopes), paste the [recommended scope list](#3-recommended-scopes) below.
-5. Open **Demander l'accès** (Request access) at the top of the **Access** section → enable **Customer data** (and Order data, etc.) → check **Analyses de données** (Data analytics) → save. *On a development store this is approved instantly.*
+4. Under **Access** → **Access scopes**, paste the [recommended scope list](#3-recommended-scopes) below.
+5. Open **Request access** at the top of the **Access** section → enable **Customer data** (and Order data, etc.) → check **Data analytics** → save. *On a development store this is approved instantly.*
 6. **Publish** the version.
 7. Install the app on your store from the **Distribution** section.
 8. Open **Settings** of the app → copy **Client ID** and **Client Secret**.
@@ -49,7 +49,7 @@ If both are filled, the direct token takes priority.
 
 ## 3. Recommended Scopes
 
-Paste this comma-separated list into the **Access scopes** field of your custom app version (Dev Dashboard → Access → Champs d'accès):
+Paste this comma-separated list into the **Access scopes** field of your custom app version (Dev Dashboard → Access → Access scopes):
 
 ```
 read_products, read_customers, read_orders, read_draft_orders,
