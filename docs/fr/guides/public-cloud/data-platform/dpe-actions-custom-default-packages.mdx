@@ -46,7 +46,7 @@ Cependant, **vous pouvez tout à fait installer toute autre librairie en plus de
 
 Lorsque vous créez une nouvelle action personnalisée à l'aide du Data Processing Engine de la Data Platform, vous serez certainement amené à vous connecter à des sources de données externes et à utiliser une variété de formats de fichiers. **La Data Platform dispose d'une liste préexistante de modules pour gérer à la fois les formats de données et les types de connecteurs au sein de votre code**.
 
-La liste des modules préinstallés par défaut inclut principalement la prise en charge des formats de fichiers génériques et d'autres composants de la platform (data warehouse et datastore) : mySQL, S3, CSV, XML, XLS, XLSX, JSON. Les formats de fichiers Parquet ne sont pas installés par défaut en raison de la taille du module (environ 400 Mo), ce qui ajouterait de la latence à la construction des workers.
+La liste des modules préinstallés par défaut inclut principalement la prise en charge des formats de fichiers génériques et d'autres composants de la platform (data warehouse et datastore) : mySQL, S3<sup>1</sup>, CSV, XML, XLS, XLSX, JSON. Les formats de fichiers Parquet ne sont pas installés par défaut en raison de la taille du module (environ 400 Mo), ce qui ajouterait de la latence à la construction des workers.
 
 Pour installer des modules de la Data Platform pour vos actions personnalisées, vous pouvez soit le faire via l'interface graphique de configuration de l'action personnalisée, dans la section *Requirements*. Par exemple, si vous utilisez les fonctions du SDK pour vous connecter à une source Dropbox externe mais que vous n'avez pas installé le module Dropbox, votre code lèvera une erreur à moins de configurer votre action personnalisée comme ci-dessous :
 
@@ -110,3 +110,5 @@ Posez vos questions, faites-nous part de vos commentaires et interagissez direct
 Si vous avez besoin d'une assistance concernant vos services OVHcloud, créez une demande depuis notre [centre d'aide](/links/support-contact).
 
 Rejoignez notre [communauté d'utilisateurs](/links/community).
+
+<sup>1</sup> : S3 est une marque déposée appartenant à Amazon Technologies, Inc. Les services de OVHcloud ne sont pas sponsorisés, approuvés, ou affiliés de quelque manière que ce soit.

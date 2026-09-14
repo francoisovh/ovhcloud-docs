@@ -16,7 +16,7 @@ Le connecteur renvoie le **JSON brut** de l'API HubSpot. La platform aplatit aut
 **Prérequis :** un compte HubSpot (le plan gratuit suffit pour l'accès à l'API. Aucun plan payant n'est requis) avec au moins quelques enregistrements de test (contacts, entreprises) afin d'avoir des données à extraire. Inscrivez-vous sur [app.hubspot.com/signup-hubspot/crm](https://app.hubspot.com/signup-hubspot/crm).
 :::
 
-## 2. Obtenir un token API
+## 1. Obtenir un token API
 
 ### Créer une Private App
 
@@ -40,7 +40,7 @@ Collez votre token dans le champ **Clé API HubSpot** :
 pat-eu1-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-## 3. Scopes recommandés
+## 2. Scopes recommandés
 
 ### Scopes minimum (CRM de base)
 
@@ -73,7 +73,7 @@ Pour extraire les contacts, entreprises, transactions et tickets :
 Commencez avec les scopes minimum. Vous pouvez toujours en ajouter d'autres plus tard dans les paramètres de votre Private App.
 :::
 
-## 4. Types d'endpoints disponibles
+## 3. Types d'endpoints disponibles
 
 ### CRM (données relationnelles)
 
@@ -124,10 +124,10 @@ Commencez avec les scopes minimum. Vous pouvez toujours en ajouter d'autres plus
 | **custom_events** | Événements comportementaux | event_object_type, event_object_id, max_items |
 | **timeline_events** | Modèles d'événements de timeline | app_id |
 
-## 5. Ajouter une source HubSpot sur Data Platform
+## 4. Ajouter une source HubSpot sur Data Platform
 
 1. Dans les **Connectors** de la Data Platform, trouvez **HubSpot** dans le source store et cliquez sur **Select**.
-2. Collez le token Private App de l'[étape 2](#2-obtenir-un-token-api) dans le champ **Clé API HubSpot**.
+2. Collez le token Private App de l'[étape 1](#1-obtenir-un-token-api) dans le champ **Clé API HubSpot**.
 3. Cliquez sur **Connect** pour vérifier les identifiants.
 4. Cliquez sur **Add an Endpoint**, choisissez un type d'endpoint dans le menu déroulant (par ex. `crm_objects`), puis renseignez les paramètres requis par cet endpoint (par exemple `object_type: contacts`, un `properties_filter` optionnel, et un `max_items` optionnel).
 5. Répétez l'étape 4 pour chaque endpoint supplémentaire que vous souhaitez ingérer dans cette source. Chaque endpoint devient une table distincte dans le lakehouse.
@@ -137,7 +137,7 @@ Commencez avec les scopes minimum. Vous pouvez toujours en ajouter d'autres plus
 Le **nom technique** ne peut pas être modifié après la création de la source. Il est utilisé lors de l'ouverture de la source via le [SDK Python de la Data Platform](/guides/public-cloud/data-platform/landing-page-developers-python-sdk).
 :::
 
-## 6. Exemple rapide : extraire les contacts
+## 5. Exemple rapide : extraire les contacts
 
 1. **Endpoint** : `crm_objects`
 2. **Object Type** : `contacts`
@@ -146,7 +146,7 @@ Le **nom technique** ne peut pas être modifié après la création de la source
 
 Le connecteur renvoie le JSON brut de l'API HubSpot. La platform aplatit automatiquement les objets imbriqués (par ex. `properties.email` devient une colonne `properties_email`) et stocke le résultat dans le lakehouse.
 
-## 7. Bonnes pratiques
+## 6. Bonnes pratiques
 
 ### Utiliser le filtre de propriétés
 
@@ -164,7 +164,7 @@ Extrayez les pipelines séparément pour obtenir une table de référence. Vous 
 
 L'endpoint `properties_meta` renvoie le dictionnaire de données complet pour n'importe quel type d'objet. Utile pour découvrir quels champs existent et leurs types.
 
-## 8. Limites selon le plan HubSpot
+## 7. Limites selon le plan HubSpot
 
 Certains endpoints nécessitent des plans payants :
 

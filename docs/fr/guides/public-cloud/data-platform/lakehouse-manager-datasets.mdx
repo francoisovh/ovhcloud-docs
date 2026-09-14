@@ -36,7 +36,7 @@ Le Lakehouse Manager sépare l'organisation **logique** de vos données de l'end
 
 - **Datasets** : une enveloppe logique qui regroupe des tables. Un dataset ne stocke **aucune** donnée lui-même.
 - **Tables** : les objets physiques, stockés dans [Apache Iceberg](https://iceberg.apache.org/) et gérés par le Lakehouse Manager.
-- **Buckets** : un espace de stockage d'objets compatible S3 pour les fichiers non structurés, indépendant du Lakehouse. Voir [Buckets](/guides/public-cloud/data-platform/lakehouse-manager-buckets).
+- **Buckets** : un espace de stockage d'objets compatible S3<sup>1</sup> pour les fichiers non structurés, indépendant du Lakehouse. Voir [Buckets](/guides/public-cloud/data-platform/lakehouse-manager-buckets).
 
 Un dataset n'est donc **pas** un bucket : c'est un regroupement logique de tables.
 
@@ -147,3 +147,5 @@ Posez vos questions, faites-nous part de vos commentaires et interagissez direct
 Si vous avez besoin d'une assistance concernant vos services OVHcloud, créez une demande depuis notre [centre d'aide](/links/support-contact).
 
 Rejoignez notre [communauté d'utilisateurs](/links/community).
+
+<sup>1</sup> : S3 est une marque déposée appartenant à Amazon Technologies, Inc. Les services de OVHcloud ne sont pas sponsorisés, approuvés, ou affiliés de quelque manière que ce soit.

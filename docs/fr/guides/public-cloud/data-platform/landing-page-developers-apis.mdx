@@ -16,7 +16,7 @@ Les API de la Data Platform sont l'alternative programmatique à l'interface, po
 **L'API complète de la Data Platform est en cours de développement.** Ce que cette section documente aujourd'hui est l'[authentification](/guides/public-cloud/data-platform/developers-api-authentication) : comment obtenir un token par mot de passe ou par identifiants de clé API, et comment l'invalider. Les références de endpoints pour le reste de la platform arriveront ici au fur et à mesure de leur sortie.
 :::
 
-En attendant, deux autres voies couvrent la majorité du travail programmatique. Le [Custom Actions SDK](/guides/public-cloud/data-platform/landing-page-developers-python-sdk) lit et écrit des datasets, des tables et des buckets depuis le compute propre d'un projet. Les buckets du projet parlent S3, donc n'importe quel client compatible S3 fonctionne directement contre eux, comme le montre le [tutoriel d'accès aux buckets](/guides/public-cloud/data-platform/tutorials-bucket-s3-access).
+En attendant, deux autres voies couvrent la majorité du travail programmatique. Le [Custom Actions SDK](/guides/public-cloud/data-platform/landing-page-developers-python-sdk) lit et écrit des datasets, des tables et des buckets depuis le compute propre d'un projet. Les buckets du projet parlent S3<sup>1</sup>, donc n'importe quel client compatible S3 fonctionne directement contre eux, comme le montre le [tutoriel d'accès aux buckets](/guides/public-cloud/data-platform/tutorials-bucket-s3-access).
 
 Les conventions ci-dessous s'appliquent aux endpoints d'authentification et à l'API au fur et à mesure de sa croissance.
 
@@ -81,3 +81,5 @@ Posez vos questions, faites-nous part de vos commentaires et interagissez direct
 Si vous avez besoin d'une assistance concernant vos services OVHcloud, créez une demande depuis notre [centre d'aide](/links/support-contact).
 
 Rejoignez notre [communauté d'utilisateurs](/links/community).
+
+<sup>1</sup> : S3 est une marque déposée appartenant à Amazon Technologies, Inc. Les services de OVHcloud ne sont pas sponsorisés, approuvés, ou affiliés de quelque manière que ce soit.

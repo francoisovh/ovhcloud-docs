@@ -134,7 +134,7 @@ spark_df.write.format("parquet").save(url_dst)
 ## Cas d'usage 5 : écrire vers un stockage objet avec insert_dataframe
 
 La fonction `insert_dataframe()` simplifie les opérations du cas d'usage précédent. 
-Elle est disponible pour les connecteurs PySpark compatibles de type stockage objet (actuellement Data Platform Buckets, S3 et [Azure Blob Storage](/guides/public-cloud/data-platform/connectors-sources-blob-storage))
+Elle est disponible pour les connecteurs PySpark compatibles de type stockage objet (actuellement Data Platform Buckets, S3<sup>1</sup> et [Azure Blob Storage](/guides/public-cloud/data-platform/connectors-sources-blob-storage))
 
 ```python
 from logging import getLogger
@@ -186,3 +186,5 @@ Posez vos questions, faites-nous part de vos commentaires et interagissez direct
 Si vous avez besoin d'une assistance concernant vos services OVHcloud, créez une demande depuis notre [centre d'aide](/links/support-contact).
 
 Rejoignez notre [communauté d'utilisateurs](/links/community).
+
+<sup>1</sup> : S3 est une marque déposée appartenant à Amazon Technologies, Inc. Les services de OVHcloud ne sont pas sponsorisés, approuvés, ou affiliés de quelque manière que ce soit.
