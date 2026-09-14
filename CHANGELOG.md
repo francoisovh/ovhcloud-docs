@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026.09.14
+
+### Features
+- **data-platform:** rewrite generic page titles for search
+- **data-platform:** add Views and Deduplicate guides
+- **data-platform:** import Data Platform documentation
+
+### Fixes
+- **data-platform:** correct spelling and grammar across 17 guides
+- **data-platform:** repair dead in-page anchors
+- **data-platform:** repair the API authentication guide
+- **data-platform:** add the S3 trademark footer to the 23 guides using S3
+- **data-platform:** repair the Facebook connector guide
+- **data-platform:** correct two invented Objective sentences
+- **data-platform:** drop empty TOC headings, unlink localhost, fix descriptions
+- **data-platform:** localize the landing card links
+- **data-platform:** unblock the build — fence languages and API links
+
+### Documentation
+- 2018 guides updated across de, en, es, fr, it, pl, pt
+
 ## 2026.09.11
 
 ### Fixes
