@@ -9540,7 +9540,7 @@
     "pt": "Actions"
   },
   "sidebar.gen.publicCloudDataPlatformAdvanced": {
-    "fr": "Advanced",
+    "fr": "Avancé",
     "en": "Advanced",
     "de": "Advanced",
     "es": "Advanced",
@@ -9558,7 +9558,7 @@
     "pt": "Aggregate"
   },
   "sidebar.gen.publicCloudDataPlatformAlerting": {
-    "fr": "Alerting",
+    "fr": "Alertes",
     "en": "Alerting",
     "de": "Alerting",
     "es": "Alerting",
@@ -9567,7 +9567,7 @@
     "pt": "Alerting"
   },
   "sidebar.gen.publicCloudDataPlatformAnalyticsAndBi": {
-    "fr": "Analytics & BI",
+    "fr": "Analytics et BI",
     "en": "Analytics & BI",
     "de": "Analytics & BI",
     "es": "Analytics & BI",
@@ -9585,7 +9585,7 @@
     "pt": "Analytics Manager"
   },
   "sidebar.gen.publicCloudDataPlatformAnalyticsManagerHistory": {
-    "fr": "History",
+    "fr": "Historique",
     "en": "History",
     "de": "History",
     "es": "History",
@@ -9594,7 +9594,7 @@
     "pt": "History"
   },
   "sidebar.gen.publicCloudDataPlatformAnalyticsManagerResources": {
-    "fr": "Resources",
+    "fr": "Ressources",
     "en": "Resources",
     "de": "Resources",
     "es": "Resources",
@@ -9603,7 +9603,7 @@
     "pt": "Resources"
   },
   "sidebar.gen.publicCloudDataPlatformAnalyticsManagerSettings": {
-    "fr": "Settings",
+    "fr": "Paramètres",
     "en": "Settings",
     "de": "Settings",
     "es": "Settings",
@@ -9621,7 +9621,7 @@
     "pt": "Analyzer"
   },
   "sidebar.gen.publicCloudDataPlatformApis": {
-    "fr": "APIs",
+    "fr": "API",
     "en": "APIs",
     "de": "APIs",
     "es": "APIs",
@@ -9630,7 +9630,7 @@
     "pt": "APIs"
   },
   "sidebar.gen.publicCloudDataPlatformAppServicesAppsCustomDomain": {
-    "fr": "Custom Domain",
+    "fr": "Domaine personnalisé",
     "en": "Custom Domain",
     "de": "Custom Domain",
     "es": "Custom Domain",
@@ -9639,7 +9639,7 @@
     "pt": "Custom Domain"
   },
   "sidebar.gen.publicCloudDataPlatformAppServicesAppsDashboards": {
-    "fr": "Dashboards",
+    "fr": "Tableaux de bord",
     "en": "Dashboards",
     "de": "Dashboards",
     "es": "Dashboards",
@@ -9666,7 +9666,7 @@
     "pt": "Formatter"
   },
   "sidebar.gen.publicCloudDataPlatformAppServicesAppsGitIntegration": {
-    "fr": "Git Integration",
+    "fr": "Intégration Git",
     "en": "Git Integration",
     "de": "Git Integration",
     "es": "Git Integration",
@@ -9693,7 +9693,7 @@
     "pt": "Style"
   },
   "sidebar.gen.publicCloudDataPlatformAppServicesAppsTranslations": {
-    "fr": "Translations",
+    "fr": "Traductions",
     "en": "Translations",
     "de": "Translations",
     "es": "Translations",
@@ -9702,7 +9702,7 @@
     "pt": "Translations"
   },
   "sidebar.gen.publicCloudDataPlatformApplicationServices": {
-    "fr": "Application Services",
+    "fr": "Applications Services",
     "en": "Application Services",
     "de": "Application Services",
     "es": "Application Services",
@@ -9711,7 +9711,7 @@
     "pt": "Application Services"
   },
   "sidebar.gen.publicCloudDataPlatformApplySegmentationToYourJobs": {
-    "fr": "Apply segmentation to your jobs",
+    "fr": "Appliquer la segmentation à vos jobs",
     "en": "Apply segmentation to your jobs",
     "de": "Apply segmentation to your jobs",
     "es": "Apply segmentation to your jobs",
@@ -9720,7 +9720,7 @@
     "pt": "Apply segmentation to your jobs"
   },
   "sidebar.gen.publicCloudDataPlatformApps": {
-    "fr": "Apps",
+    "fr": "Applications",
     "en": "Apps",
     "de": "Apps",
     "es": "Apps",
@@ -9729,7 +9729,7 @@
     "pt": "Apps"
   },
   "sidebar.gen.publicCloudDataPlatformAuthProviders": {
-    "fr": "Auth. Providers",
+    "fr": "Fournisseurs d'authentification",
     "en": "Auth. Providers",
     "de": "Auth. Providers",
     "es": "Auth. Providers",
@@ -9738,7 +9738,7 @@
     "pt": "Auth. Providers"
   },
   "sidebar.gen.publicCloudDataPlatformBuildAnIotFleetMonitoringPipeline": {
-    "fr": "Build an IoT fleet-monitoring pipeline",
+    "fr": "Construire un pipeline de supervision IoT",
     "en": "Build an IoT fleet-monitoring pipeline",
     "de": "Build an IoT fleet-monitoring pipeline",
     "es": "Build an IoT fleet-monitoring pipeline",
@@ -9756,7 +9756,7 @@
     "pt": "Build your first app from scratch"
   },
   "sidebar.gen.publicCloudDataPlatformConnectToProjectData": {
-    "fr": "Connect to project data",
+    "fr": "Se connecter aux données du projet",
     "en": "Connect to project data",
     "de": "Connect to project data",
     "es": "Connect to project data",
@@ -9774,7 +9774,7 @@
     "pt": "Connectors"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsAnalyzerBlueprintRules": {
-    "fr": "Blueprint rules",
+    "fr": "Règles de blueprint",
     "en": "Blueprint rules",
     "de": "Blueprint rules",
     "es": "Blueprint rules",
@@ -9783,7 +9783,7 @@
     "pt": "Blueprint rules"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsAnalyzerExtractMetadata": {
-    "fr": "Extract the metadata",
+    "fr": "Extraire les métadonnées",
     "en": "Extract the metadata",
     "de": "Extract the metadata",
     "es": "Extract the metadata",
@@ -9801,7 +9801,7 @@
     "pt": "OpenLineage"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsConsumersPowerBi": {
-    "fr": "PowerBI",
+    "fr": "Power BI",
     "en": "PowerBI",
     "de": "PowerBI",
     "es": "PowerBI",
@@ -9819,7 +9819,7 @@
     "pt": "Trino"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsKeyConcepts": {
-    "fr": "Discover key concepts",
+    "fr": "Concepts clés",
     "en": "Discover key concepts",
     "de": "Discover key concepts",
     "es": "Discover key concepts",
@@ -9882,7 +9882,7 @@
     "pt": "HTTP Files"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesHubspotTechnicalReference": {
-    "fr": "Technical Reference",
+    "fr": "Référence technique",
     "en": "Technical Reference",
     "de": "Technical Reference",
     "es": "Technical Reference",
@@ -9909,7 +9909,7 @@
     "pt": "MySQL"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesOdooTechnicalReference": {
-    "fr": "Technical Reference",
+    "fr": "Référence technique",
     "en": "Technical Reference",
     "de": "Technical Reference",
     "es": "Technical Reference",
@@ -9918,7 +9918,7 @@
     "pt": "Technical Reference"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesOvhcloudApi": {
-    "fr": "OVHcloud API",
+    "fr": "API OVHcloud",
     "en": "OVHcloud API",
     "de": "OVHcloud API",
     "es": "OVHcloud API",
@@ -9936,7 +9936,7 @@
     "pt": "HTTP REST"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesSalesforceTechnicalReference": {
-    "fr": "Technical Reference",
+    "fr": "Référence technique",
     "en": "Technical Reference",
     "de": "Technical Reference",
     "es": "Technical Reference",
@@ -9954,7 +9954,7 @@
     "pt": "SFTP"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesShopifyTechnicalReference": {
-    "fr": "Technical Reference",
+    "fr": "Référence technique",
     "en": "Technical Reference",
     "de": "Technical Reference",
     "es": "Technical Reference",
@@ -9972,7 +9972,7 @@
     "pt": "SQL Server"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesStripeTechnicalReference": {
-    "fr": "Technical Reference",
+    "fr": "Référence technique",
     "en": "Technical Reference",
     "de": "Technical Reference",
     "es": "Technical Reference",
@@ -9990,7 +9990,7 @@
     "pt": "Trino"
   },
   "sidebar.gen.publicCloudDataPlatformConnectorsSourcesTwitter": {
-    "fr": "Twitter",
+    "fr": "X",
     "en": "Twitter",
     "de": "Twitter",
     "es": "Twitter",
@@ -10008,7 +10008,7 @@
     "pt": "File Upload"
   },
   "sidebar.gen.publicCloudDataPlatformConsumers": {
-    "fr": "Consumers",
+    "fr": "Consommateurs",
     "en": "Consumers",
     "de": "Consumers",
     "es": "Consumers",
@@ -10026,7 +10026,7 @@
     "pt": "Control Center"
   },
   "sidebar.gen.publicCloudDataPlatformControlCenterAlertingHealthChecks": {
-    "fr": "Configure health check alerts",
+    "fr": "Configurer les alertes de health check",
     "en": "Configure health check alerts",
     "de": "Configure health check alerts",
     "es": "Configure health check alerts",
@@ -10035,7 +10035,7 @@
     "pt": "Configure health check alerts"
   },
   "sidebar.gen.publicCloudDataPlatformControlCenterAlertingJobExecution": {
-    "fr": "Configure job execution alerts",
+    "fr": "Configurer les alertes d'exécution",
     "en": "Configure job execution alerts",
     "de": "Configure job execution alerts",
     "es": "Configure job execution alerts",
@@ -10044,7 +10044,7 @@
     "pt": "Configure job execution alerts"
   },
   "sidebar.gen.publicCloudDataPlatformControlCenterAuditing": {
-    "fr": "Auditing",
+    "fr": "Audit",
     "en": "Auditing",
     "de": "Auditing",
     "es": "Auditing",
@@ -10071,7 +10071,7 @@
     "pt": "Logs Explorer"
   },
   "sidebar.gen.publicCloudDataPlatformControlCenterMonitoring": {
-    "fr": "Monitoring",
+    "fr": "Supervision",
     "en": "Monitoring",
     "de": "Monitoring",
     "es": "Monitoring",
@@ -10089,7 +10089,7 @@
     "pt": "Custom"
   },
   "sidebar.gen.publicCloudDataPlatformCustomActionsSdk": {
-    "fr": "Custom Actions SDK",
+    "fr": "SDK Custom Actions",
     "en": "Custom Actions SDK",
     "de": "Custom Actions SDK",
     "es": "Custom Actions SDK",
@@ -10098,7 +10098,7 @@
     "pt": "Custom Actions SDK"
   },
   "sidebar.gen.publicCloudDataPlatformDashboards": {
-    "fr": "Dashboards",
+    "fr": "Tableaux de bord",
     "en": "Dashboards",
     "de": "Dashboards",
     "es": "Dashboards",
@@ -10107,7 +10107,7 @@
     "pt": "Dashboards"
   },
   "sidebar.gen.publicCloudDataPlatformDataExportAndManagement": {
-    "fr": "Data export & management",
+    "fr": "Export et gestion des données",
     "en": "Data export & management",
     "de": "Data export & management",
     "es": "Data export & management",
@@ -10116,7 +10116,7 @@
     "pt": "Data export & management"
   },
   "sidebar.gen.publicCloudDataPlatformDataIngestionAndTransformation": {
-    "fr": "Data ingestion & transformation",
+    "fr": "Ingestion et transformation des données",
     "en": "Data ingestion & transformation",
     "de": "Data ingestion & transformation",
     "es": "Data ingestion & transformation",
@@ -10125,7 +10125,7 @@
     "pt": "Data ingestion & transformation"
   },
   "sidebar.gen.publicCloudDataPlatformDataPlatformApis": {
-    "fr": "Data Platform APIs",
+    "fr": "API de la Data Platform",
     "en": "Data Platform APIs",
     "de": "Data Platform APIs",
     "es": "Data Platform APIs",
@@ -10143,7 +10143,7 @@
     "pt": "Data Processing Engine"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopYourOwnApp": {
-    "fr": "Develop your own app",
+    "fr": "Développer votre propre application",
     "en": "Develop your own app",
     "de": "Develop your own app",
     "es": "Develop your own app",
@@ -10152,7 +10152,7 @@
     "pt": "Develop your own app"
   },
   "sidebar.gen.publicCloudDataPlatformDeveloperDocumentation": {
-    "fr": "Developer Documentation",
+    "fr": "Documentation développeur",
     "en": "Developer Documentation",
     "de": "Developer Documentation",
     "es": "Developer Documentation",
@@ -10161,7 +10161,7 @@
     "pt": "Developer Documentation"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersApiAuthentication": {
-    "fr": "Authentication",
+    "fr": "Authentification",
     "en": "Authentication",
     "de": "Authentication",
     "es": "Authentication",
@@ -10170,7 +10170,7 @@
     "pt": "Authentication"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkConnectBucket": {
-    "fr": "Connect to a bucket",
+    "fr": "Se connecter à un bucket",
     "en": "Connect to a bucket",
     "de": "Connect to a bucket",
     "es": "Connect to a bucket",
@@ -10179,7 +10179,7 @@
     "pt": "Connect to a bucket"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkConnectDataset": {
-    "fr": "Connect to a dataset",
+    "fr": "Se connecter à un dataset",
     "en": "Connect to a dataset",
     "de": "Connect to a dataset",
     "es": "Connect to a dataset",
@@ -10188,7 +10188,7 @@
     "pt": "Connect to a dataset"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkConnectSpark": {
-    "fr": "PySpark Support",
+    "fr": "Prise en charge de PySpark",
     "en": "PySpark Support",
     "de": "PySpark Support",
     "es": "PySpark Support",
@@ -10197,7 +10197,7 @@
     "pt": "PySpark Support"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkGit": {
-    "fr": "Use custom Python modules via Git",
+    "fr": "Utiliser des modules Python personnalisés via Git",
     "en": "Use custom Python modules via Git",
     "de": "Use custom Python modules via Git",
     "es": "Use custom Python modules via Git",
@@ -10206,7 +10206,7 @@
     "pt": "Use custom Python modules via Git"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkLineage": {
-    "fr": "Track data lineage",
+    "fr": "Suivre le lineage des données",
     "en": "Track data lineage",
     "de": "Track data lineage",
     "es": "Track data lineage",
@@ -10215,7 +10215,7 @@
     "pt": "Track data lineage"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkQuickStartBucket": {
-    "fr": "Quick start: bucket",
+    "fr": "Démarrage rapide : bucket",
     "en": "Quick start: bucket",
     "de": "Quick start: bucket",
     "es": "Quick start: bucket",
@@ -10224,7 +10224,7 @@
     "pt": "Quick start: bucket"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkQuickStartDataset": {
-    "fr": "Quick start: dataset",
+    "fr": "Démarrage rapide : dataset",
     "en": "Quick start: dataset",
     "de": "Quick start: dataset",
     "es": "Quick start: dataset",
@@ -10233,7 +10233,7 @@
     "pt": "Quick start: dataset"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkQuickStartSource": {
-    "fr": "Quick start: source",
+    "fr": "Démarrage rapide : source",
     "en": "Quick start: source",
     "de": "Quick start: source",
     "es": "Quick start: source",
@@ -10242,7 +10242,7 @@
     "pt": "Quick start: source"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkQuickStartSpark": {
-    "fr": "Quick start: PySpark",
+    "fr": "Démarrage rapide : PySpark",
     "en": "Quick start: PySpark",
     "de": "Quick start: PySpark",
     "es": "Quick start: PySpark",
@@ -10251,7 +10251,7 @@
     "pt": "Quick start: PySpark"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkSegmentation": {
-    "fr": "Use segmentation in a Custom action",
+    "fr": "Utiliser la segmentation dans une action Custom",
     "en": "Use segmentation in a Custom action",
     "de": "Use segmentation in a Custom action",
     "es": "Use segmentation in a Custom action",
@@ -10260,7 +10260,7 @@
     "pt": "Use segmentation in a Custom action"
   },
   "sidebar.gen.publicCloudDataPlatformDevelopersPythonSdkUseEnvironmentVariables": {
-    "fr": "Use environment variables",
+    "fr": "Utiliser des variables d'environnement",
     "en": "Use environment variables",
     "de": "Use environment variables",
     "es": "Use environment variables",
@@ -10269,7 +10269,7 @@
     "pt": "Use environment variables"
   },
   "sidebar.gen.publicCloudDataPlatformDpeActionsAggregateAdvancedMode": {
-    "fr": "Advanced Mode",
+    "fr": "Mode avancé",
     "en": "Advanced Mode",
     "de": "Advanced Mode",
     "es": "Advanced Mode",
@@ -10296,7 +10296,7 @@
     "pt": "CSV to PostgreSQL"
   },
   "sidebar.gen.publicCloudDataPlatformDpeActionsCustomDefaultPackages": {
-    "fr": "Default Packages",
+    "fr": "Packages par défaut",
     "en": "Default Packages",
     "de": "Default Packages",
     "es": "Default Packages",
@@ -10377,7 +10377,7 @@
     "pt": "File Transfer"
   },
   "sidebar.gen.publicCloudDataPlatformDpeActionsLoadAdvancedMode": {
-    "fr": "Advanced Mode",
+    "fr": "Mode avancé",
     "en": "Advanced Mode",
     "de": "Advanced Mode",
     "es": "Advanced Mode",
@@ -10404,7 +10404,7 @@
     "pt": "Load to Bucket"
   },
   "sidebar.gen.publicCloudDataPlatformDpeActionsMaintenance": {
-    "fr": "Maintenance actions",
+    "fr": "Actions de maintenance",
     "en": "Maintenance actions",
     "de": "Maintenance actions",
     "es": "Maintenance actions",
@@ -10458,7 +10458,7 @@
     "pt": "SQL"
   },
   "sidebar.gen.publicCloudDataPlatformDpeEnvironments": {
-    "fr": "Environments",
+    "fr": "Environnements",
     "en": "Environments",
     "de": "Environments",
     "es": "Environments",
@@ -10467,7 +10467,7 @@
     "pt": "Environments"
   },
   "sidebar.gen.publicCloudDataPlatformDpeJobsPerimeter": {
-    "fr": "Perimeter",
+    "fr": "Périmètre",
     "en": "Perimeter",
     "de": "Perimeter",
     "es": "Perimeter",
@@ -10476,7 +10476,7 @@
     "pt": "Perimeter"
   },
   "sidebar.gen.publicCloudDataPlatformDpeJobsResources": {
-    "fr": "Resources",
+    "fr": "Ressources",
     "en": "Resources",
     "de": "Resources",
     "es": "Resources",
@@ -10494,7 +10494,7 @@
     "pt": "Segmentation"
   },
   "sidebar.gen.publicCloudDataPlatformDpeNotebooksJupyterAiExtension": {
-    "fr": "Jupyter AI Extension",
+    "fr": "Extension Jupyter AI",
     "en": "Jupyter AI Extension",
     "de": "Jupyter AI Extension",
     "es": "Jupyter AI Extension",
@@ -10503,7 +10503,7 @@
     "pt": "Jupyter AI Extension"
   },
   "sidebar.gen.publicCloudDataPlatformDpeSettings": {
-    "fr": "Settings",
+    "fr": "Paramètres",
     "en": "Settings",
     "de": "Settings",
     "es": "Settings",
@@ -10512,7 +10512,7 @@
     "pt": "Settings"
   },
   "sidebar.gen.publicCloudDataPlatformDpeWorkflowsAdvancedMode": {
-    "fr": "Advanced Mode",
+    "fr": "Mode avancé",
     "en": "Advanced Mode",
     "de": "Advanced Mode",
     "es": "Advanced Mode",
@@ -10521,7 +10521,7 @@
     "pt": "Advanced Mode"
   },
   "sidebar.gen.publicCloudDataPlatformExecutionPreferences": {
-    "fr": "Execution preferences",
+    "fr": "Préférences d'exécution",
     "en": "Execution preferences",
     "de": "Execution preferences",
     "es": "Execution preferences",
@@ -10530,7 +10530,7 @@
     "pt": "Execution preferences"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStarted": {
-    "fr": "Getting Started",
+    "fr": "Premiers pas",
     "en": "Getting Started",
     "de": "Getting Started",
     "es": "Getting Started",
@@ -10539,7 +10539,7 @@
     "pt": "Getting Started"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedConnectSources": {
-    "fr": "1. Connect sources",
+    "fr": "1. Connecter les sources",
     "en": "1. Connect sources",
     "de": "1. Connect sources",
     "es": "1. Connect sources",
@@ -10548,7 +10548,7 @@
     "pt": "1. Connect sources"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedCreateQueries": {
-    "fr": "4. Create queries",
+    "fr": "4. Créer des requêtes",
     "en": "4. Create queries",
     "de": "4. Create queries",
     "es": "4. Create queries",
@@ -10557,7 +10557,7 @@
     "pt": "4. Create queries"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedExposeApi": {
-    "fr": "5. Expose through API",
+    "fr": "5. Exposer via une API",
     "en": "5. Expose through API",
     "de": "5. Expose through API",
     "es": "5. Expose through API",
@@ -10566,7 +10566,7 @@
     "pt": "5. Expose through API"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedOrganizeData": {
-    "fr": "2. Organize data",
+    "fr": "2. Organiser les données",
     "en": "2. Organize data",
     "de": "2. Organize data",
     "es": "2. Organize data",
@@ -10575,7 +10575,7 @@
     "pt": "2. Organize data"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedPrepareData": {
-    "fr": "3. Prepare data",
+    "fr": "3. Préparer les données",
     "en": "3. Prepare data",
     "de": "3. Prepare data",
     "es": "3. Prepare data",
@@ -10584,7 +10584,7 @@
     "pt": "3. Prepare data"
   },
   "sidebar.gen.publicCloudDataPlatformGettingStartedVisualizeData": {
-    "fr": "6. Visualize data",
+    "fr": "6. Visualiser les données",
     "en": "6. Visualize data",
     "de": "6. Visualize data",
     "es": "6. Visualize data",
@@ -10602,7 +10602,7 @@
     "pt": "HubSpot"
   },
   "sidebar.gen.publicCloudDataPlatformIamApplicationAuthentication": {
-    "fr": "Application authentication",
+    "fr": "Authentification des applications",
     "en": "Application authentication",
     "de": "Application authentication",
     "es": "Application authentication",
@@ -10611,7 +10611,7 @@
     "pt": "Application authentication"
   },
   "sidebar.gen.publicCloudDataPlatformIamAuthProvidersAuth0": {
-    "fr": "Set up Auth0",
+    "fr": "Configurer Auth0",
     "en": "Set up Auth0",
     "de": "Set up Auth0",
     "es": "Set up Auth0",
@@ -10620,7 +10620,7 @@
     "pt": "Set up Auth0"
   },
   "sidebar.gen.publicCloudDataPlatformIamAuthProvidersAzureAd": {
-    "fr": "Set up Azure AD",
+    "fr": "Configurer Azure AD",
     "en": "Set up Azure AD",
     "de": "Set up Azure AD",
     "es": "Set up Azure AD",
@@ -10629,7 +10629,7 @@
     "pt": "Set up Azure AD"
   },
   "sidebar.gen.publicCloudDataPlatformIamAuthProvidersCustomMapping": {
-    "fr": "Set up custom mappings",
+    "fr": "Configurer des mappings personnalisés",
     "en": "Set up custom mappings",
     "de": "Set up custom mappings",
     "es": "Set up custom mappings",
@@ -10638,7 +10638,7 @@
     "pt": "Set up custom mappings"
   },
   "sidebar.gen.publicCloudDataPlatformIamAuthProvidersOkta": {
-    "fr": "Set up Okta",
+    "fr": "Configurer Okta",
     "en": "Set up Okta",
     "de": "Set up Okta",
     "es": "Set up Okta",
@@ -10647,7 +10647,7 @@
     "pt": "Set up Okta"
   },
   "sidebar.gen.publicCloudDataPlatformIamGroups": {
-    "fr": "Groups",
+    "fr": "Groupes",
     "en": "Groups",
     "de": "Groups",
     "es": "Groups",
@@ -10656,7 +10656,7 @@
     "pt": "Groups"
   },
   "sidebar.gen.publicCloudDataPlatformIamOrganizationAuthentication": {
-    "fr": "Authentication Methods",
+    "fr": "Méthodes d'authentification",
     "en": "Authentication Methods",
     "de": "Authentication Methods",
     "es": "Authentication Methods",
@@ -10665,7 +10665,7 @@
     "pt": "Authentication Methods"
   },
   "sidebar.gen.publicCloudDataPlatformIamOrganizationMfaSetup": {
-    "fr": "MFA setup guide",
+    "fr": "Configurer le MFA",
     "en": "MFA setup guide",
     "de": "MFA setup guide",
     "es": "MFA setup guide",
@@ -10674,7 +10674,7 @@
     "pt": "MFA setup guide"
   },
   "sidebar.gen.publicCloudDataPlatformIamServiceAccounts": {
-    "fr": "Service Accounts",
+    "fr": "Comptes de service",
     "en": "Service Accounts",
     "de": "Service Accounts",
     "es": "Service Accounts",
@@ -10683,7 +10683,7 @@
     "pt": "Service Accounts"
   },
   "sidebar.gen.publicCloudDataPlatformIamUsers": {
-    "fr": "Users",
+    "fr": "Utilisateurs",
     "en": "Users",
     "de": "Users",
     "es": "Users",
@@ -10719,7 +10719,7 @@
     "pt": "Lakehouse Manager"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerAttributes": {
-    "fr": "Attributes",
+    "fr": "Attributs",
     "en": "Attributes",
     "de": "Attributes",
     "es": "Attributes",
@@ -10755,7 +10755,7 @@
     "pt": "Explorer"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerKeyConcepts": {
-    "fr": "Discover key concepts",
+    "fr": "Concepts clés",
     "en": "Discover key concepts",
     "de": "Discover key concepts",
     "es": "Discover key concepts",
@@ -10773,7 +10773,7 @@
     "pt": "Lineage"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerManageTables": {
-    "fr": "Manage a table",
+    "fr": "Gérer une table",
     "en": "Manage a table",
     "de": "Manage a table",
     "es": "Manage a table",
@@ -10782,7 +10782,7 @@
     "pt": "Manage a table"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerPolicyTagsCelConditions": {
-    "fr": "CEL Conditions",
+    "fr": "Conditions CEL",
     "en": "CEL Conditions",
     "de": "CEL Conditions",
     "es": "CEL Conditions",
@@ -10791,7 +10791,7 @@
     "pt": "CEL Conditions"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerRowFilters": {
-    "fr": "Row Filters",
+    "fr": "Filtres de lignes",
     "en": "Row Filters",
     "de": "Row Filters",
     "es": "Row Filters",
@@ -10809,7 +10809,7 @@
     "pt": "Time Travel"
   },
   "sidebar.gen.publicCloudDataPlatformLakehouseManagerViews": {
-    "fr": "Views",
+    "fr": "Vues",
     "en": "Views",
     "de": "Views",
     "es": "Views",
@@ -10827,7 +10827,7 @@
     "pt": "Load"
   },
   "sidebar.gen.publicCloudDataPlatformManageOrganizationsProfile": {
-    "fr": "Edit your Data Platform profile",
+    "fr": "Modifier votre profil Data Platform",
     "en": "Edit your Data Platform profile",
     "de": "Edit your Data Platform profile",
     "es": "Edit your Data Platform profile",
@@ -10836,7 +10836,7 @@
     "pt": "Edit your Data Platform profile"
   },
   "sidebar.gen.publicCloudDataPlatformManageOrganizationsSettings": {
-    "fr": "Organization settings",
+    "fr": "Paramètres de l'organisation",
     "en": "Organization settings",
     "de": "Organization settings",
     "es": "Organization settings",
@@ -10845,7 +10845,7 @@
     "pt": "Organization settings"
   },
   "sidebar.gen.publicCloudDataPlatformManageOrganizationsSigninSignup": {
-    "fr": "Sign up and sign in",
+    "fr": "Inscription et connexion",
     "en": "Sign up and sign in",
     "de": "Sign up and sign in",
     "es": "Sign up and sign in",
@@ -10854,7 +10854,7 @@
     "pt": "Sign up and sign in"
   },
   "sidebar.gen.publicCloudDataPlatformManageProjectsConfigVariables": {
-    "fr": "Config Variables",
+    "fr": "Variables de configuration",
     "en": "Config Variables",
     "de": "Config Variables",
     "es": "Config Variables",
@@ -10863,7 +10863,7 @@
     "pt": "Config Variables"
   },
   "sidebar.gen.publicCloudDataPlatformManageProjectsHome": {
-    "fr": "Project Home",
+    "fr": "Accueil du projet",
     "en": "Project Home",
     "de": "Project Home",
     "es": "Project Home",
@@ -10872,7 +10872,7 @@
     "pt": "Project Home"
   },
   "sidebar.gen.publicCloudDataPlatformManageYourPlatform": {
-    "fr": "Manage your platform",
+    "fr": "Gérer votre platform",
     "en": "Manage your platform",
     "de": "Manage your platform",
     "es": "Manage your platform",
@@ -10890,7 +10890,7 @@
     "pt": "Notebooks"
   },
   "sidebar.gen.publicCloudDataPlatformNycTaxiDataAnalysisWithPyspark": {
-    "fr": "NYC Taxi Data Analysis with PySpark",
+    "fr": "Analyse des données NYC Taxi avec PySpark",
     "en": "NYC Taxi Data Analysis with PySpark",
     "de": "NYC Taxi Data Analysis with PySpark",
     "es": "NYC Taxi Data Analysis with PySpark",
@@ -10908,7 +10908,7 @@
     "pt": "Odoo"
   },
   "sidebar.gen.publicCloudDataPlatformOrganizationIam": {
-    "fr": "Organization IAM",
+    "fr": "IAM de l'organisation",
     "en": "Organization IAM",
     "de": "Organization IAM",
     "es": "Organization IAM",
@@ -10917,7 +10917,7 @@
     "pt": "Organization IAM"
   },
   "sidebar.gen.publicCloudDataPlatformOrganizationsAndUserProfiles": {
-    "fr": "Organizations and user profiles",
+    "fr": "Organisations et profils utilisateurs",
     "en": "Organizations and user profiles",
     "de": "Organizations and user profiles",
     "es": "Organizations and user profiles",
@@ -10926,7 +10926,7 @@
     "pt": "Organizations and user profiles"
   },
   "sidebar.gen.publicCloudDataPlatformPolicyTags": {
-    "fr": "Policy Tags",
+    "fr": "Policy tags",
     "en": "Policy Tags",
     "de": "Policy Tags",
     "es": "Policy Tags",
@@ -10935,7 +10935,7 @@
     "pt": "Policy Tags"
   },
   "sidebar.gen.publicCloudDataPlatformProjectIam": {
-    "fr": "Project IAM",
+    "fr": "IAM du projet",
     "en": "Project IAM",
     "de": "Project IAM",
     "es": "Project IAM",
@@ -10944,7 +10944,7 @@
     "pt": "Project IAM"
   },
   "sidebar.gen.publicCloudDataPlatformProjectSetupAndConfiguration": {
-    "fr": "Project setup & configuration",
+    "fr": "Création et configuration du projet",
     "en": "Project setup & configuration",
     "de": "Project setup & configuration",
     "es": "Project setup & configuration",
@@ -10953,7 +10953,7 @@
     "pt": "Project setup & configuration"
   },
   "sidebar.gen.publicCloudDataPlatformProjects": {
-    "fr": "Projects",
+    "fr": "Projets",
     "en": "Projects",
     "de": "Projects",
     "es": "Projects",
@@ -10962,7 +10962,7 @@
     "pt": "Projects"
   },
   "sidebar.gen.publicCloudDataPlatformQueries": {
-    "fr": "Queries",
+    "fr": "Requêtes",
     "en": "Queries",
     "de": "Queries",
     "es": "Queries",
@@ -10971,7 +10971,7 @@
     "pt": "Queries"
   },
   "sidebar.gen.publicCloudDataPlatformQuickStarts": {
-    "fr": "Quick starts",
+    "fr": "Démarrages rapides",
     "en": "Quick starts",
     "de": "Quick starts",
     "es": "Quick starts",
@@ -11034,7 +11034,7 @@
     "pt": "Tables"
   },
   "sidebar.gen.publicCloudDataPlatformTutorials": {
-    "fr": "Tutorials",
+    "fr": "Tutoriels",
     "en": "Tutorials",
     "de": "Tutorials",
     "es": "Tutorials",
@@ -11043,7 +11043,7 @@
     "pt": "Tutorials"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAiEndpoints": {
-    "fr": "Data Analysis with AI Endpoints",
+    "fr": "Analyse de données avec AI Endpoints",
     "en": "Data Analysis with AI Endpoints",
     "de": "Data Analysis with AI Endpoints",
     "es": "Data Analysis with AI Endpoints",
@@ -11052,7 +11052,7 @@
     "pt": "Data Analysis with AI Endpoints"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAppDevelopmentBuild": {
-    "fr": "1. Build with an external repo",
+    "fr": "1. Construire avec un dépôt externe",
     "en": "1. Build with an external repo",
     "de": "1. Build with an external repo",
     "es": "1. Build with an external repo",
@@ -11061,7 +11061,7 @@
     "pt": "1. Build with an external repo"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAppDevelopmentComponents": {
-    "fr": "3. Create and edit components",
+    "fr": "3. Créer et éditer des composants",
     "en": "3. Create and edit components",
     "de": "3. Create and edit components",
     "es": "3. Create and edit components",
@@ -11070,7 +11070,7 @@
     "pt": "3. Create and edit components"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAppDevelopmentConfig": {
-    "fr": "2. Discover the config files",
+    "fr": "2. Découvrir les fichiers de configuration",
     "en": "2. Discover the config files",
     "de": "2. Discover the config files",
     "es": "2. Discover the config files",
@@ -11079,7 +11079,7 @@
     "pt": "2. Discover the config files"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAppDevelopmentCustomComponents": {
-    "fr": "4. Add custom components",
+    "fr": "4. Ajouter des composants personnalisés",
     "en": "4. Add custom components",
     "de": "4. Add custom components",
     "es": "4. Add custom components",
@@ -11088,7 +11088,7 @@
     "pt": "4. Add custom components"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsAppDevelopmentReactShadcn": {
-    "fr": "5. React Shadcn Vite template",
+    "fr": "5. Template React Shadcn Vite",
     "en": "5. React Shadcn Vite template",
     "de": "5. React Shadcn Vite template",
     "es": "5. React Shadcn Vite template",
@@ -11097,7 +11097,7 @@
     "pt": "5. React Shadcn Vite template"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsBillingAnalysis": {
-    "fr": "OVHcloud Billing Data Analysis",
+    "fr": "Analyse des données de facturation OVHcloud",
     "en": "OVHcloud Billing Data Analysis",
     "de": "OVHcloud Billing Data Analysis",
     "es": "OVHcloud Billing Data Analysis",
@@ -11106,7 +11106,7 @@
     "pt": "OVHcloud Billing Data Analysis"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsBucketRoleConditions": {
-    "fr": "Set role conditions on one bucket",
+    "fr": "Définir des conditions de rôle sur un bucket",
     "en": "Set role conditions on one bucket",
     "de": "Set role conditions on one bucket",
     "es": "Set role conditions on one bucket",
@@ -11115,7 +11115,7 @@
     "pt": "Set role conditions on one bucket"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsCustomEventHandling": {
-    "fr": "Custom event handling action",
+    "fr": "Action de gestion d'événements personnalisée",
     "en": "Custom event handling action",
     "de": "Custom event handling action",
     "es": "Custom event handling action",
@@ -11124,7 +11124,7 @@
     "pt": "Custom event handling action"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsCustomizeFirstApp": {
-    "fr": "Customize your first app",
+    "fr": "Personnaliser votre première application",
     "en": "Customize your first app",
     "de": "Customize your first app",
     "es": "Customize your first app",
@@ -11133,7 +11133,7 @@
     "pt": "Customize your first app"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsExportImportConfig": {
-    "fr": "Export / import a configuration",
+    "fr": "Exporter / importer une configuration",
     "en": "Export / import a configuration",
     "de": "Export / import a configuration",
     "es": "Export / import a configuration",
@@ -11142,7 +11142,7 @@
     "pt": "Export / import a configuration"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsExternalDatasets": {
-    "fr": "Data models with external datasets",
+    "fr": "Modèles de données et datasets externes",
     "en": "Data models with external datasets",
     "de": "Data models with external datasets",
     "es": "Data models with external datasets",
@@ -11151,7 +11151,7 @@
     "pt": "Data models with external datasets"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsFinopsFocusSuperset": {
-    "fr": "FOCUS & Apache Superset Use Case",
+    "fr": "Cas d'usage FOCUS et Apache Superset",
     "en": "FOCUS & Apache Superset Use Case",
     "de": "FOCUS & Apache Superset Use Case",
     "es": "FOCUS & Apache Superset Use Case",
@@ -11160,7 +11160,7 @@
     "pt": "FOCUS & Apache Superset Use Case"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsGenerateApiKeys": {
-    "fr": "Generate API keys for external access",
+    "fr": "Générer des clés API pour un accès externe",
     "en": "Generate API keys for external access",
     "de": "Generate API keys for external access",
     "es": "Generate API keys for external access",
@@ -11169,7 +11169,7 @@
     "pt": "Generate API keys for external access"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsInstallApacheSuperset": {
-    "fr": "Deploy Apache Superset",
+    "fr": "Déployer Apache Superset",
     "en": "Deploy Apache Superset",
     "de": "Deploy Apache Superset",
     "es": "Deploy Apache Superset",
@@ -11178,7 +11178,7 @@
     "pt": "Deploy Apache Superset"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsKafka": {
-    "fr": "Stream data from Apache Kafka",
+    "fr": "Recevoir des données depuis Apache Kafka",
     "en": "Stream data from Apache Kafka",
     "de": "Stream data from Apache Kafka",
     "es": "Stream data from Apache Kafka",
@@ -11187,7 +11187,7 @@
     "pt": "Stream data from Apache Kafka"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsMetabaseTrino": {
-    "fr": "Using Metabase with Trino",
+    "fr": "Utiliser Metabase avec Trino",
     "en": "Using Metabase with Trino",
     "de": "Using Metabase with Trino",
     "es": "Using Metabase with Trino",
@@ -11196,7 +11196,7 @@
     "pt": "Using Metabase with Trino"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsProjectChecklist": {
-    "fr": "Your project checklist",
+    "fr": "Votre checklist de projet",
     "en": "Your project checklist",
     "de": "Your project checklist",
     "es": "Your project checklist",
@@ -11205,7 +11205,7 @@
     "pt": "Your project checklist"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsPysparkCheatSheet": {
-    "fr": "PySpark Cheat Sheet",
+    "fr": "Aide-mémoire PySpark",
     "en": "PySpark Cheat Sheet",
     "de": "PySpark Cheat Sheet",
     "es": "PySpark Cheat Sheet",
@@ -11214,7 +11214,7 @@
     "pt": "PySpark Cheat Sheet"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsPysparkMultiDataset": {
-    "fr": "Multi-Dataset Comparative Analysis",
+    "fr": "Analyse comparative multi-datasets",
     "en": "Multi-Dataset Comparative Analysis",
     "de": "Multi-Dataset Comparative Analysis",
     "es": "Multi-Dataset Comparative Analysis",
@@ -11223,7 +11223,7 @@
     "pt": "Multi-Dataset Comparative Analysis"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsPysparkSingleDataset": {
-    "fr": "Single Dataset Deep Dive (Yellow Taxi)",
+    "fr": "Analyse approfondie d'un dataset (Yellow Taxi)",
     "en": "Single Dataset Deep Dive (Yellow Taxi)",
     "de": "Single Dataset Deep Dive (Yellow Taxi)",
     "es": "Single Dataset Deep Dive (Yellow Taxi)",
@@ -11232,7 +11232,7 @@
     "pt": "Single Dataset Deep Dive (Yellow Taxi)"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsPythonSdkTransform": {
-    "fr": "Transform data using the Python SDK",
+    "fr": "Transformer les données avec le SDK Python",
     "en": "Transform data using the Python SDK",
     "de": "Transform data using the Python SDK",
     "es": "Transform data using the Python SDK",
@@ -11241,7 +11241,7 @@
     "pt": "Transform data using the Python SDK"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationFiles": {
-    "fr": "Set of files",
+    "fr": "Ensemble de fichiers",
     "en": "Set of files",
     "de": "Set of files",
     "es": "Set of files",
@@ -11250,7 +11250,7 @@
     "pt": "Set of files"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationPredefinedValues": {
-    "fr": "Predefined values",
+    "fr": "Valeurs prédéfinies",
     "en": "Predefined values",
     "de": "Predefined values",
     "es": "Predefined values",
@@ -11259,7 +11259,7 @@
     "pt": "Predefined values"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationSourceAccounts": {
-    "fr": "Source accounts",
+    "fr": "Comptes source",
     "en": "Source accounts",
     "de": "Source accounts",
     "es": "Source accounts",
@@ -11268,7 +11268,7 @@
     "pt": "Source accounts"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationSourceChunks": {
-    "fr": "Source rows chunks",
+    "fr": "Lots de lignes source",
     "en": "Source rows chunks",
     "de": "Source rows chunks",
     "es": "Source rows chunks",
@@ -11277,7 +11277,7 @@
     "pt": "Source rows chunks"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationTableAttribute": {
-    "fr": "Project table attribute",
+    "fr": "Attribut de table du projet",
     "en": "Project table attribute",
     "de": "Project table attribute",
     "es": "Project table attribute",
@@ -11286,7 +11286,7 @@
     "pt": "Project table attribute"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSegmentationWorkflowDates": {
-    "fr": "Workflow dates perimeter",
+    "fr": "Périmètre de dates du workflow",
     "en": "Workflow dates perimeter",
     "de": "Workflow dates perimeter",
     "es": "Workflow dates perimeter",
@@ -11295,7 +11295,7 @@
     "pt": "Workflow dates perimeter"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsSqlTransformation": {
-    "fr": "SQL Transformation",
+    "fr": "Transformation SQL",
     "en": "SQL Transformation",
     "de": "SQL Transformation",
     "es": "SQL Transformation",
@@ -11304,7 +11304,7 @@
     "pt": "SQL Transformation"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsTrinoExternalTools": {
-    "fr": "Integrating Trino with External Tools",
+    "fr": "Intégrer Trino à des outils externes",
     "en": "Integrating Trino with External Tools",
     "de": "Integrating Trino with External Tools",
     "es": "Integrating Trino with External Tools",
@@ -11313,7 +11313,7 @@
     "pt": "Integrating Trino with External Tools"
   },
   "sidebar.gen.publicCloudDataPlatformTutorialsVersioningBasics": {
-    "fr": "Learn versioning basics",
+    "fr": "Découvrir le contrôle de version",
     "en": "Learn versioning basics",
     "de": "Learn versioning basics",
     "es": "Learn versioning basics",
@@ -11322,7 +11322,7 @@
     "pt": "Learn versioning basics"
   },
   "sidebar.gen.publicCloudDataPlatformUsersRolesAndGroups": {
-    "fr": "Users, Roles & Groups",
+    "fr": "Utilisateurs, rôles et groupes",
     "en": "Users, Roles & Groups",
     "de": "Users, Roles & Groups",
     "es": "Users, Roles & Groups",
