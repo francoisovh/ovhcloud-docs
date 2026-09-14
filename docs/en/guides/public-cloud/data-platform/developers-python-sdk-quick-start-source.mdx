@@ -27,10 +27,10 @@ def customfunc(event):
         # here we are connecting to a source named 'chicago_files'
         source_address = "dwh/chicago_files_artur/"
 
-        # specfify unsupported filename from list of files in source
+        # specify unsupported filename from list of files in source
         filename_w_extension = "stations_rides.csv"
 
-        # connecto to file toget the address 
+        # connect to to file to get the address 
         source_file_connector = connect(source_address + filename_w_extension) 
 
         # connect to file directly

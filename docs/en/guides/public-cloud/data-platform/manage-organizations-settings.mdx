@@ -68,7 +68,7 @@ Within the Data Processing Engine (DPE), certain actions and workflows can be cr
 
 When pre-allocation is enabled for a serverless action or workflow, a chosen number of DPUs will be permanently allocated to it. This guarantees that during runtime, the action or workflow will always have the necessary resources, preventing failures or performance issues due to resource scarcity.
 
-This differs from the `always-up` mode. While `always-up` also ensures continuous resource availability, the key distinction is that in tis mode, resources are continuously consumed, even when the action or workflow is not actively running. In contrast, pre-allocation for serverless actions/workflows only reserves the DPUs for when the action is actually executed, making it a more efficient approach for ensuring critical operations without constant consumption.
+This differs from the `always-up` mode. While `always-up` also ensures continuous resource availability, the key distinction is that in this mode, resources are continuously consumed, even when the action or workflow is not actively running. In contrast, pre-allocation for serverless actions/workflows only reserves the DPUs for when the action is actually executed, making it a more efficient approach for ensuring critical operations without constant consumption.
 
 If there are any projects with pre-allocated resources, that too will be seen under the distribution of DPUs sections
 
