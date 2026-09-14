@@ -22,8 +22,6 @@ This authentication mode allows you to [connect with a login and password](/guid
 In the base URLs in the code snippets below, you will need to replace `my-project` with your [Project's subdomain](/guides/public-cloud/data-platform/manage-projects-config-variables#project-subdomain).
 :::
 
-///
-
 Example request :
 
 ```bash
@@ -49,14 +47,12 @@ Example response :
 "lastname": "Doe", // The last name of the logged-in user
 "civility": "M. ", // The civility of the logged-in user
 "login": "john.doe", // The login of the logged-in user
-"password_renew": false, // flag to know if the has to change his password "password_expiration": "2020-02-28T17:17:10.274Z ", // password expiration
-date
+"password_renew": false, // flag to know if the user has to change their password
+"password_expiration": "2020-02-28T17:17:10.274Z", // password expiration date
 "token": "f54e34a56b897"
 }
 ```
-///
-
-||||
+| Name | Type | Description |
 | :------------ | :-------------: | -------------: |
 | login | String | The login of the user, as received in the registration email. |
 | password | String | The password of the user, as received in the registration email. |
@@ -70,8 +66,6 @@ This authentication mode allows you to [connect with an API and secret key](/gui
 :::info
 In the base URLs in the code snippets below, you will need to replace `my-project` with your [Project's subdomain](/guides/public-cloud/data-platform/manage-projects-config-variables#project-subdomain).
 :::
-
-///
 
 Example request:
 
@@ -98,14 +92,12 @@ Example response:
 "lastname": "Doe", // The last name of the logged-in user
 "civility": "M. ", // The civility of the logged-in user
 "login": "john.doe", // The login of the logged-in user
-"password_renew": false, // flag to know if the has to change his password "password_expiration": "2020-02-28T17:17:10.274Z ", // password expiration
-date
+"password_renew": false, // flag to know if the user has to change their password
+"password_expiration": "2020-02-28T17:17:10.274Z", // password expiration date
 "token": "f54e34a56b897"
 }
 ```
-///
-
-||||
+| Name | Type | Description |
 | :------------ | :-------------: | -------------: |
 | apikey | String [A-Za-z0- 9\-] | The api key provided by the new device registration. |
 | secretkey | String [A-Za-z0- 9\-] | The secret key provided by the new device registration. |
@@ -120,8 +112,6 @@ In order to delete a token, you can call the logout endpoint.
 :::info
 In the base URLs in the code snippets below, you will need to replace `my-project` with your [Project's subdomain](/guides/public-cloud/data-platform/manage-projects-config-variables#project-subdomain).
 :::
-
-///
 
 Example request:
 
@@ -142,8 +132,6 @@ Example response:
 }
 
 ```
-///
-
 ## Go further
 
 If you need training or technical assistance to implement our solutions, contact your sales representative or click on [this link](/links/professional-services) to get a quote and ask our Professional Services experts for a custom analysis of your project.
