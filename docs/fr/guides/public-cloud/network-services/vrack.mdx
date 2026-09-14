@@ -949,7 +949,7 @@ L'espace client OVHcloud permet d'attacher une instance à un ou plusieurs rése
 **Ordre des interfaces après un attachement/détachement à chaud** <a name="interface-order-after-reboot"></a>
 
 :::warning
-Attacher ou détacher des interfaces réseau (ports) alors que l'instance est en cours d'exécution (à chaud) peut modifier l'ordre dans lequel le système d'exploitation invité les détecte lors du prochain redémarrage. L'interface identifiée comme `eth0` (ou toute autre interface attendue, y compris l'interface publique) peut alors changer, ce qui a déjà provoqué des interruptions réseau inattendues chez certains clients.
+Attacher ou détacher des interfaces réseau (ports) alors que l'instance est en cours d'exécution (à chaud) peut modifier l'ordre dans lequel le système d'exploitation invité les détecte lors du prochain redémarrage. L'interface identifiée comme `eth0` (ou toute autre interface attendue, y compris l'interface publique) peut alors changer, ce qui peut entraîner des problèmes réseau inattendus si la nouvelle configuration n'est pas validée au préalable.
 
 Si vous devez réorganiser plusieurs interfaces sur une instance déjà en production :
 1. Détachez toutes les interfaces que vous souhaitez modifier.

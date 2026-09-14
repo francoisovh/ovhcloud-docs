@@ -947,7 +947,7 @@ The OVHcloud Control Panel lets you attach an instance to one or more private ne
 **Interface order after hot-attaching or hot-detaching ports** <a name="interface-order-after-reboot"></a>
 
 :::warning
-Attaching or detaching network interfaces (ports) while the instance is running (hot-plug) can change the order in which the guest operating system sees them on the next reboot. As a result, the interface your OS identifies as `eth0` (or another expected interface, including the public one) may change, which has caused unexpected network outages for some customers.
+Attaching or detaching network interfaces (ports) while the instance is running (hot-plug) can change the order in which the guest operating system sees them on the next reboot. As a result, the interface your OS identifies as `eth0` (or another expected interface, including the public one) may change, which can lead to unexpected network issues if the new configuration is not validated beforehand.
 
 If you need to reorganise several interfaces on a running instance:
 1. Detach all the interfaces you want to change.
