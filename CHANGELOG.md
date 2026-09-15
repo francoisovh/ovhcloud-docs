@@ -3,6 +3,8 @@
 ## 2026.09.15
 
 ### Features
+- **vps:** translate the native Valheim guide to de, es, it, pl, pt
+- **vps:** update the Valheim guide for the native Game Panel image
 - add the web-hosting cpnav key and tokenize its blocks
 - **i18n:** translate the Data Platform sidebar labels to French
 
@@ -15,7 +17,7 @@
 - tokenize the Web Cloud Databases cpnav blocks
 
 ### Documentation
-- 2029 guides updated across de, en, es, fr, it, pl, pt
+- 2611 guides updated across de, en, es, fr, it, pl, pt
 
 ## 2026.09.14
 
