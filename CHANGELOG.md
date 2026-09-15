@@ -3,6 +3,7 @@
 ## 2026.09.15
 
 ### Features
+- add the web-hosting cpnav key and tokenize its blocks
 - **i18n:** translate the Data Platform sidebar labels to French
 
 ### Fixes
@@ -10,8 +11,11 @@
 - **i18n:** restore diacritics in internal anchor links (#777)
 - **data-platform:** align the French translations with the EN source fixes
 
+### Maintenance
+- tokenize the Web Cloud Databases cpnav blocks
+
 ### Documentation
-- 467 guides updated across de, en, es, fr, it, pl, pt
+- 1990 guides updated across de, en, es, fr, it, pl, pt
 
 ## 2026.09.14
 
