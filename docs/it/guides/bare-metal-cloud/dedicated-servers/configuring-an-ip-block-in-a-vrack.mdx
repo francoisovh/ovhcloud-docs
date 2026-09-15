@@ -205,8 +205,8 @@ Le modifiche di priorità si applicano a tutti i blocchi di Additional IP indiri
 Nel caso del vRack, il primo, il penultimo e l'ultimo indirizzo di un dato blocco IP sono sempre riservati rispettivamente all'indirizzo di rete, al gateway di rete e al broadcast di rete. Ciò significa che il primo indirizzo utilizzabile è il secondo indirizzo del blocco, come indicato di seguito:
 
 ```sh
-46.105.135.96   Reserved: Network address
-46.105.135.97   First usable IP
+46.105.135.96   Riservato: indirizzo di rete
+46.105.135.97   Primo IP utilizzabile
 46.105.135.98
 46.105.135.99
 46.105.135.100
@@ -218,9 +218,9 @@ Nel caso del vRack, il primo, il penultimo e l'ultimo indirizzo di un dato blocc
 46.105.135.106
 46.105.135.107
 46.105.135.108
-46.105.135.109  Last usable IP
-46.105.135.110  Reserved: Network gateway
-46.105.135.111  Reserved: Network broadcast
+46.105.135.109  Ultimo IP utilizzabile
+46.105.135.110  Riservato: gateway di rete
+46.105.135.111  Riservato: broadcast di rete
 ```
 
 Per configurare il primo indirizzo IP utilizzabile, dobbiamo modificare il file di configurazione di rete, come indicato di seguito. In questo esempio, dobbiamo utilizzare una subnet mask di **255.255.255.240**.

@@ -205,8 +205,8 @@ Zmiany priorytetów są stosowane do wszystkich bloków Additional IP routowanyc
 W sieci vRack pierwszy, przedostatni i ostatni adres w dowolnym bloku IP są zawsze zarezerwowane odpowiednio dla adresu sieci, bramki sieciowej i rozgłoszenia sieciowego. Oznacza to, że pierwszy użyteczny adres to drugi adres w bloku, jak pokazano poniżej:
 
 ```sh
-46.105.135.96   Reserved: Network address
-46.105.135.97   First usable IP
+46.105.135.96   Zarezerwowany: adres sieci
+46.105.135.97   Pierwszy użyteczny adres IP
 46.105.135.98
 46.105.135.99
 46.105.135.100
@@ -218,9 +218,9 @@ W sieci vRack pierwszy, przedostatni i ostatni adres w dowolnym bloku IP są zaw
 46.105.135.106
 46.105.135.107
 46.105.135.108
-46.105.135.109  Last usable IP
-46.105.135.110  Reserved: Network gateway
-46.105.135.111  Reserved: Network broadcast
+46.105.135.109  Ostatni użyteczny adres IP
+46.105.135.110  Zarezerwowany: bramka sieciowa
+46.105.135.111  Zarezerwowany: rozgłoszenie sieciowe
 ```
 
 Aby skonfigurować pierwszy użyteczny adres IP, należy edytować plik konfiguracji sieci, jak pokazano poniżej. W tym przykładzie musimy użyć maski podsieci **255.255.255.240**.
