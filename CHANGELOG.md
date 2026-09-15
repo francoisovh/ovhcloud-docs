@@ -1,5 +1,95 @@
 # Changelog
 
+## 2026.09.11
+
+### Fixes
+- add vertical spacing inside tab panels
+
+### Maintenance
+- **links:** centralise Public Cloud URLs and fix the valkey routes (#756)
+
+### Documentation
+- 719 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.10.1
+
+### Features
+- **{components/{Api,Api,ManagerLink},bare-metal-cloud/dedicated-servers}:** soyoustart / kimsufi endpoints, reinstallation methods (fr+en) (#710)
+
+### Documentation
+- 54 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.10
+
+### Fixes
+- iam: example should match the specification (#745)
+
+### Documentation
+- 284 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.08
+
+### Features
+- **links:** add 162 commercial link keys for SEO request
+
+### Fixes
+- **links:** correct broken web databases route
+
+### Documentation
+- 182 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.07
+
+### Fixes
+- **links:** point all community links at the /links/community alias (#736)
+- **k8s:** update helm value for fluent-bit (#724)
+- **links:** correct broken Public Cloud projects route
+
+### Documentation
+- 1368 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.02
+
+### Features
+- **fragments:** Improve and remodel architecture (#713)
+- **theme:** add markdown/PDF/AI buttons to landing pages
+
+### Fixes
+- **theme:** align product-PDF button with the toolbar and redraw its icon
+- **theme:** keep landing-page toolbar out of .md export and search
+
+### Documentation
+- 16 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.01.1
+
+### Fixes
+- **theme:** keep "View as Markdown" label out of the search index
+
+### Documentation
+- 25 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.09.01
+
+### Fixes
+- **account:** replace non-standard e-invoicing motif codes
+
+### Documentation
+- 32 guides updated across de, en, es, fr, it, pl, pt
+
+## 2026.08.31
+
+### Features
+- **object-storage:** add Object Storage landing page (#697)
+- **block storage:** new guide about configuration of ocfs2 (#344)
+- **billing:** add FR guide for entering a commitment number
+
+### Fixes
+- **i18n:** add EN fallback symlinks for 6 sidebar guides
+
+### Documentation
+- 146 guides updated across de, en, es, fr, it, pl, pt
+
 ## 2026.08.28
 
 ### Documentation

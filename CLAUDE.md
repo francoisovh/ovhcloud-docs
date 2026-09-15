@@ -41,10 +41,16 @@ Reusable per-locale text blocks, inserted in MDX as a token on its own line (`[[
 
 | File | Role |
 |------|------|
-| `config/fragments.ts` | **Source of truth** — fragment bodies per locale (markdown; import-free JSX only) |
+| `config/fragments/<key>/<locale>.md` | **Source of truth** — one markdown body per locale; the directory name is the key (markdown, or import-free JSX / globally registered components only) |
+| `config/fragments.ts` | Loader — discovers the directories and builds the `FragmentMap` |
 | `config/fragment-rules.ts` | Generates the `ReplaceRule[]` for a locale (fallback `locale → en → first`) |
 | `plugins/remarkNoUnresolvedFragments.ts` | Fails the build on an unresolved/misspelled token |
+| `scripts/fragments-validate.ts` | `pnpm fragment:validate` — locale coverage, unknown keys, orphans, usage counts |
+| `scripts/fragments-new.ts` | `pnpm fragment:new <key>` — scaffolds the per-locale stubs |
+| `scripts/test-fragments.ts` | `pnpm fragment:test` — expansion + guard behaviour, incl. the code-fence trap |
 | `styles/index.css` | `details.support` styling for the `support-scope` block |
+
+Adding a fragment: `pnpm fragment:new <key>`, write `en.md` first (it is the fallback for every locale), translate the rest, then `pnpm fragment:validate`. A staged change under `config/fragments/**` runs the validator via `.husky/pre-commit`.
 
 Authoring rules and the current key list: `docs/en/internal/format-reference.mdx` §6b.
 
@@ -61,7 +67,7 @@ This affects sidebar key matching — see `config/sidebar/index.ts` for details.
 ### Dev Performance
 With 9500+ MDX files, dev SSR is slow (~9s per page). Optimizations applied:
 
-- **`lastUpdated`** - The built-in feature is off (`themeConfig.lastUpdated: false`) in **both** configs, since it runs `git log` per page (80k+ calls). The value comes from `plugins/lastUpdatedFromCache.ts` and is rendered by a custom `LastUpdated` component. The plugin resolves, in order: frontmatter `lastUpdated`/`updated` (read from Rspress's already-parsed `frontmatter`, no disk re-read), then the `.last-updated-cache.json` git cache built by `pnpm build:cache`
+- **`lastUpdated`** - The built-in feature is off (`themeConfig.lastUpdated: false`) in **both** configs, since it runs `git log` per page (80k+ calls). Frontmatter `lastUpdated` is the **single source of truth**: `plugins/lastUpdatedFromFrontmatter.ts` reads it from Rspress's already-parsed `frontmatter` (no disk re-read) and a custom `LastUpdated` component renders it. There is no git-derived fallback — a git timestamp would bump the date on reader-invisible edits (key renames, boilerplate swaps, typography passes), which the authoring rules forbid. A guide with no `lastUpdated` therefore fails the build (`plugins/remarkNoDatelessGuide.ts`); the only exemption is the body-less navigational page types listed in `config/navigational-page-types.ts`
 - **Shiki langs** - Removed `markdown` and `mdx` which disable lazy loading
 - Multi-locale and shiki lang count have minimal impact on SSR time
 
@@ -180,11 +186,10 @@ The custom theme (`theme/index.tsx`) extends Rspress's original theme:
 - Frontmatter `outline: false` or `sidebar: false` hides those elements
 
 ### Build Process
-1. `pnpm build:cache` generates `.last-updated-cache.json` (see Dev Performance)
-2. Turborepo runs `build:{locale}` tasks in parallel
-3. Each locale build uses `rspress.config.build.ts` with `LOCALE` env var
-4. Output goes to `dist/{locale}/`
-5. `pnpm build:combine` merges locale builds into final `dist/` and generates the sitemaps, sitemap index and `robots.txt`
+1. Turborepo runs `build:{locale}` tasks in parallel
+2. Each locale build uses `rspress.config.build.ts` with `LOCALE` env var
+3. Output goes to `dist/{locale}/`
+4. `pnpm build:combine` merges locale builds into final `dist/` and generates the sitemaps, sitemap index and `robots.txt`
 
 #### Site origin (SEO / LLM crawlers)
 `rspress.config.build.ts` sets `siteOrigin: 'https://docs.ovhcloud.com'`. It is what makes the `llms: true` output (`llms.txt`, `llms-full.txt`, the per-page `.md` links and the AI-agent hint under the H1) emit absolute rather than relative URLs. **Three copies must stay in sync:** `siteOrigin` here, `SITE_URL` in `scripts/combine-builds.ts`, and the same constant in `theme/components/SEOHead`.

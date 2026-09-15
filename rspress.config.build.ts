@@ -10,17 +10,20 @@
 import * as path from 'node:path';
 import { pluginSass } from '@rsbuild/plugin-sass';
 import { defineConfig } from '@rspress/core';
+import { generateCpNavRules } from './config/cpnav-rules';
 import { generateFragmentRules } from './config/fragment-rules';
 import { generateLinkRules } from './config/link-rules';
 import { nav } from './config/nav';
 import type { Locale } from './config/shared';
 import { locales } from './config/shared';
 import { sidebar } from './config/sidebar';
-import { pluginLastUpdatedFromCache } from './plugins/lastUpdatedFromCache';
+import { pluginLastUpdatedFromFrontmatter } from './plugins/lastUpdatedFromFrontmatter';
 import { rehypeLazyImages } from './plugins/rehypeLazyImages';
 import { remarkCpNavGate } from './plugins/remarkCpNavGate';
 import { remarkNoApiHardcoded } from './plugins/remarkNoApiHardcoded';
+import { remarkNoDatelessGuide } from './plugins/remarkNoDatelessGuide';
 import { remarkNoManagerHardcoded } from './plugins/remarkNoManagerHardcoded';
+import { remarkNoUnresolvedCpnav } from './plugins/remarkNoUnresolvedCpnav';
 import { remarkNoUnresolvedFragments } from './plugins/remarkNoUnresolvedFragments';
 import { remarkNoUnresolvedTerm } from './plugins/remarkNoUnresolvedTerm';
 
@@ -93,8 +96,8 @@ export default defineConfig({
   locales: [...locales],
   lang: locale,
 
-  // Use cached lastUpdated plugin instead of built-in (avoids 80k+ git calls)
-  plugins: [pluginLastUpdatedFromCache()],
+  // lastUpdated comes from frontmatter, not the built-in (avoids 80k+ git calls)
+  plugins: [pluginLastUpdatedFromFrontmatter()],
 
   builderConfig: {
     logLevel: 'error',
@@ -214,7 +217,9 @@ export default defineConfig({
       remarkNoManagerHardcoded,
       remarkNoApiHardcoded,
       remarkNoUnresolvedFragments,
+      remarkNoUnresolvedCpnav,
       remarkNoUnresolvedTerm,
+      remarkNoDatelessGuide,
       remarkCpNavGate,
     ],
     rehypePlugins: [rehypeLazyImages],
@@ -256,6 +261,7 @@ export default defineConfig({
   // inside fragment bodies resolve in the same pass.
   replaceRules: [
     ...generateFragmentRules(locale as Locale),
+    ...generateCpNavRules(locale as Locale),
     ...generateLinkRules(locale as Locale),
   ],
 
@@ -269,7 +275,7 @@ export default defineConfig({
     outline: { level: [2, 5] },
     enableScrollToTop: true,
     hideNavbar: 'auto',
-    lastUpdated: false, // Display handled by custom LastUpdated component; value set by pluginLastUpdatedFromCache
+    lastUpdated: false, // Display handled by custom LastUpdated component; value set by pluginLastUpdatedFromFrontmatter
     // Disable Rspress's auto-redirect based on navigator.language.
     // It assumes a single-build multi-locale setup; in our per-locale-build
     // setup `siteData.lang` equals the current build's locale, which makes the
