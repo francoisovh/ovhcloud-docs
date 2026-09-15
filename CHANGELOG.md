@@ -2,11 +2,16 @@
 
 ## 2026.09.15
 
+### Features
+- **i18n:** translate the Data Platform sidebar labels to French
+
 ### Fixes
+- **data-platform:** align FR terminology and neutralise tutorial register
 - **i18n:** restore diacritics in internal anchor links (#777)
+- **data-platform:** align the French translations with the EN source fixes
 
 ### Documentation
-- 191 guides updated across de, en, es, fr, it, pl, pt
+- 467 guides updated across de, en, es, fr, it, pl, pt
 
 ## 2026.09.14
 
