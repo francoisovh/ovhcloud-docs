@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.09.15
+
+### Fixes
+- **i18n:** restore diacritics in internal anchor links (#777)
+
+### Documentation
+- 191 guides updated across de, en, es, fr, it, pl, pt
+
 ## 2026.09.14
 
 ### Features
