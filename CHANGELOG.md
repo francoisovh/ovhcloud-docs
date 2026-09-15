@@ -15,7 +15,7 @@
 - tokenize the Web Cloud Databases cpnav blocks
 
 ### Documentation
-- 1990 guides updated across de, en, es, fr, it, pl, pt
+- 2029 guides updated across de, en, es, fr, it, pl, pt
 
 ## 2026.09.14
 
