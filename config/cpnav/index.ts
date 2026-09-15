@@ -67,7 +67,9 @@ import { telecomSms } from './keys/telecom-sms';
 import { telecomVoipFax } from './keys/telecom-voip-fax';
 import { telecomXdslFttx } from './keys/telecom-xdsl-fttx';
 import { webCloudDatabases } from './keys/web-cloud-databases';
-import { webDnsZone } from './keys/web-dns-zone';
+import { webDnsZoneOrder } from './keys/web-dns-zone-order';
+import { webDnsZones } from './keys/web-dns-zones';
+import { webDomainDnsZone } from './keys/web-domain-dns-zone';
 import { webDomains } from './keys/web-domains';
 import { webEmailPro } from './keys/web-email-pro';
 import { webExchange } from './keys/web-exchange';
@@ -84,7 +86,9 @@ import type { CpNavKey } from './types';
 export const CPNAV_KEYS: Record<string, CpNavKey> = {
   // --- Web Cloud, in Manager sidebar order -------------------------------------------
   'web-domains': webDomains,
-  'web-dns-zone': webDnsZone,
+  'web-domain-dns-zone': webDomainDnsZone,
+  'web-dns-zones': webDnsZones,
+  'web-dns-zone-order': webDnsZoneOrder,
   'web-ongoing-operations': webOngoingOperations,
   'web-hosting': webHosting,
   'web-website-view': webWebsiteView,

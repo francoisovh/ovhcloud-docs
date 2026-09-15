@@ -1,6 +1,10 @@
 import type { CpNavKey } from '../types';
 
-export const webDnsZone: CpNavKey = {
+// The standalone DNS zones sidebar entry, which lists the zones directly.
+// For the DNS zone reached through a domain, see `web-domain-dns-zone`.
+// Manager nav tree: application 'web' + hash '#/zone'.
+
+export const webDnsZones: CpNavKey = {
   universe: 'web-cloud',
   locations: [
     {
