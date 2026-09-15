@@ -9,6 +9,7 @@
 - **i18n:** translate the Data Platform sidebar labels to French
 
 ### Fixes
+- split the DNS zone cpnav key by the path each guide documents
 - **data-platform:** align FR terminology and neutralise tutorial register
 - **i18n:** restore diacritics in internal anchor links (#777)
 - **data-platform:** align the French translations with the EN source fixes
