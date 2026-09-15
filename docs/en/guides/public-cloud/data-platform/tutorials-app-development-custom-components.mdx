@@ -9,7 +9,7 @@ lastUpdated: 2026-09-14
 With the React framework, you can **create your own components** from scratch. These components can be used for two things: [dynamic parameters](/guides/public-cloud/data-platform/tutorials-app-development-custom-components#use-a-custom-component-as-a-dynamic-parameter) and [charts](/guides/public-cloud/data-platform/tutorials-app-development-custom-components#use-a-custom-component-as-a-chart).
 
 :::info
-At any point, feel free to refer to the [**Technical Guide**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component) 🔧 to learn more about custom components!
+At any point, feel free to refer to the [**Technical Guide**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component) to learn more about custom components!
 :::
 
 ## Use a custom component as a dynamic parameter
@@ -72,14 +72,14 @@ Go to your application page, notice that **the dynamic-weekday component has cha
 
 <img className="thumbnail" alt="alt text" src="/images/public-cloud/data-platform/getting-further/app-dev/picts/dynamic-parameter-checkbox-1.png" loading="lazy" />
 
-Don't worry if it doesn't work right now, its behavior will be set in the next section.
+The component is displayed but not yet functional: its behavior is defined in the next section.
 
 ### Edit a component
 
 The framework used in this guide is going to be React.
 
 :::info
-We will guide you step by step to make your components, but if you are having any trouble because you are not familiar with this framework you can check the documentation [here](https://reactjs.org/docs/getting-started.html). 🆘
+We will guide you step by step to make your components, but if you are having any trouble because you are not familiar with this framework you can check the documentation [here](https://reactjs.org/docs/getting-started.html).
 :::
 
 Also, since we are working with functional components, we will use one of latest features available, **React Hooks**. You can check this [page](https://reactjs.org/docs/hooks-intro.html) for more information.
@@ -309,7 +309,6 @@ return (
   <CheckboxGroup name='options' value={selectedOptions || []} onChange={onChange}>
   ...
 ```
-Almost there! 🚴‍♂️
 
 The last step is to bind this dynamic-parameter to the [redux global store](https://redux.js.org/api/store) to allow it to affect charts requests. We'll use React Redux hooks for a more modern and streamlined approach. Add these lines to the imports at the top of the file:
 
@@ -360,7 +359,7 @@ This `useEffect` hook will run whenever the options value (which comes directly 
 Your dynamic parameter is now connected to the global store. You can make sure of this because the charts connected to dynamic-weekday are affected by this dynamic parameter.
 
 You have created your first custom dynamic parameter.  
-If you got lost 😪along the way, no worries. You can find the final code [here](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/DynamicParameterCheckbox).
+The final code is available [here](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/DynamicParameterCheckbox).
 
 ### Adding a search bar
 
@@ -895,7 +894,7 @@ Then **wrap your circle markers** in `MarkerClusterGroup` like this:
 ```
 
 You have created your first custom component.  
-If you got lost, don't worry. You can find the final code [here](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/ChartMap).
+The final code is available [here](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/ChartMap).
 
 :::info
 Learn more about creating your custom components in the [**Technical Guide**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component)!
