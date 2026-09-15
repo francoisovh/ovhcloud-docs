@@ -18,7 +18,7 @@ L'[IAM d'organisation](/guides/public-cloud/data-platform/iam-organization) rég
 
 L'[IAM de projet](/guides/public-cloud/data-platform/landing-page-iam-project) régit un projet, et va plus loin. Il couvre les membres de l'équipe travaillant dans le projet et les utilisateurs finaux des applications qu'il déploie. L'accès est basé sur des rôles et granulaire : les [rôles](/guides/public-cloud/data-platform/iam-roles-conditions) sont accordés à des utilisateurs, à des comptes de service ou à des groupes, et évalués par rapport aux ressources du projet, jusqu'aux attributs individuels d'une table lorsque des [policy tags](/guides/public-cloud/data-platform/lakehouse-manager-policy-tags) sont impliqués. L'IAM de projet gère aussi la page de connexion de chaque application déployée et les fournisseurs d'authentification qui y sont proposés.
 
-Trois fournisseurs existent par défaut sur chaque application : Data Platform IDs, Project IDs et clés API/Secret. Des fournisseurs SSO ou MFA supplémentaires sont configurés par projet, et en ajouter un implique de modifier la configuration d'authentification de chaque application avant que les utilisateurs ne le voient dans le menu de connexion.
+Trois fournisseurs existent par défaut sur chaque application : Data Platform IDs, Projet IDs et clés API/Secret. Des fournisseurs SSO ou MFA supplémentaires sont configurés par projet, et en ajouter un implique de modifier la configuration d'authentification de chaque application avant que les utilisateurs ne le voient dans le menu de connexion.
 
 S'authentifier auprès de la platform de manière programmatique, plutôt que via une page de connexion, est couvert par l'[API d'authentification](/guides/public-cloud/data-platform/developers-api-authentication).
 

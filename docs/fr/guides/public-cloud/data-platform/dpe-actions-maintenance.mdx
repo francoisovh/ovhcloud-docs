@@ -22,7 +22,7 @@ S'il peut être utile de choisir précisément quand ces actions sont exécutée
 
 ### Workflow Auto Flush-all
 
-Lorsque vous créez un nouveau Project, nous vous conseillons de créer un workflow *_flushall* qui contient 4 actions exécutées séquentiellement en 4 étapes : Update metadata, Flush Cache: Analytics Manager, Flush Cache: App Services, puis Purge Buckets.
+Lorsque vous créez un nouveau Projet, nous vous conseillons de créer un workflow *_flushall* qui contient 4 actions exécutées séquentiellement en 4 étapes : Update metadata, Flush Cache: Analytics Manager, Flush Cache: App Services, puis Purge Buckets.
 
 <img className="thumbnail" alt="Workflow Auto Flush-all — Flush all workflow" src="/images/public-cloud/data-platform/product/dpe/actions/flush-update-metas/picts/flush_all_workflow.png" loading="lazy" />
 
@@ -64,7 +64,7 @@ L'action accepte un paramètre optionnel `params.timeout`, voir [Configurer un t
 
 ## Flush Cache: App Services
 
-Cette action est utilisée pour **appeler les [API du Project](/guides/public-cloud/data-platform/landing-page-app-services-apis) afin de vider son [cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)**. Il est fortement recommandé de la lancer à la fin d'un workflow. Cela garantit que l'API affiche les dernières valeurs des requêtes ou attributs préconfigurés.
+Cette action est utilisée pour **appeler les [API du Projet](/guides/public-cloud/data-platform/landing-page-app-services-apis) afin de vider son [cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache)**. Il est fortement recommandé de la lancer à la fin d'un workflow. Cela garantit que l'API affiche les dernières valeurs des requêtes ou attributs préconfigurés.
 
 L'action accepte un paramètre optionnel `params.timeout`, voir [Configurer un timeout d'action](/guides/public-cloud/data-platform/dpe-actions-maintenance#configurer-un-timeout-daction). Sa configuration JSON se présente comme suit :
 

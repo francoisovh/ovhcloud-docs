@@ -25,12 +25,12 @@ Vous disposez maintenant d'une application complète. L'arborescence de votre ap
 
 Clarifions le contenu de chaque répertoire :
 
-- `config` : c'est ici que se produit l'essentiel de la magie. Dans ce dossier, vous pouvez définir et mettre à jour vos fichiers de configuration pour les dashboards, les menus, les styles, les traductions, etc. Le fichier le plus important ici est `global.json`, il permet de déclarer et d'utiliser tous ces fichiers de configuration. (expliqué juste après)
+- `config` : ce dossier contient l'essentiel de la configuration de l'application. Dans ce dossier, vous pouvez définir et mettre à jour vos fichiers de configuration pour les dashboards, les menus, les styles, les traductions, etc. Le fichier le plus important ici est `global.json`, il permet de déclarer et d'utiliser tous ces fichiers de configuration. (expliqué juste après)
 - `forepaas` : c'est l'équivalent de `node_modules` pour la platform. Il contient tous les composants de base nécessaires pour intégrer votre application à la Data Platform. Tous les packages listés dans /forepaas.json sont installés ici.
 - `node_modules` : le dossier node_modules contient les bibliothèques téléchargées depuis npm. Il est basé sur /package.json.
 - `public` : ce dossier contient tous les fichiers statiques (polices, icônes, images...). Vous pouvez accéder à un fichier stocké dans ce dossier via l'URL `/assets/{subfolder}/{name}.{extension}`.  
   Par exemple, l'URL permettant d'accéder à `favicon.png` (et de l'afficher dans une balise `<img>`) situé dans `assets/img` est `/assets/img/favicon.png
-- `scripts` : ce dossier contient des scripts utiles que vous pouvez utiliser pour générer des composants, des dashboards, ou pour zipper ce Project afin de le charger facilement sur la platform.
+- `scripts` : ce dossier contient des scripts utiles que vous pouvez utiliser pour générer des composants, des dashboards, ou pour zipper ce Projet afin de le charger facilement sur la platform.
 - `src` : dans ce dossier, vous pouvez créer ou mettre à jour vos propres composants et services personnalisés. Nous vous apprendrons à le faire dans les prochaines étapes de ce tutoriel.
 
 ### Comprendre les fichiers de configuration
@@ -97,7 +97,7 @@ Maintenant que vous connaissez mieux l'architecture de l'application, vous pouve
 
 ### Surcharger le fichier de configuration globale
 
-La première étape consiste à relier votre application locale au service d'authentification et à l'API créée précédemment sur votre Project.
+La première étape consiste à relier votre application locale au service d'authentification et à l'API créée précédemment sur votre Projet.
 Comme nous avons seulement besoin que ces changements s'appliquent localement, nous ne voulons pas modifier directement `global.json`. Nous allons créer un autre fichier `global-override.json` pour le surcharger à la place.
 
 - Créez `global-override.json` dans le dossier `config`
@@ -125,7 +125,7 @@ Il y a trois variables que vous devez remplacer :
 N'oubliez pas qu'il est nécessaire de modifier les privilèges d'authentification pour permettre de récupérer vos données en ligne depuis votre build local. Faites-le en ajoutant votre hôte local (*http://localhost:3333* par défaut) à l'origine CORS dans [*Identity Access Manager*](/guides/public-cloud/data-platform/landing-page-iam) > *Settings* > *CORS origin* > *Add*.
 :::
 
-Enregistrez tous les fichiers. L'application exécutée localement affiche maintenant une vue un peu plus avancée que celle que vous aviez à la fin du guide de démarrage. 🤓
+Enregistrez tous les fichiers. L'application exécutée localement affiche maintenant une vue un peu plus avancée que celle que vous aviez à la fin du guide de démarrage.
 
 L'image suivante montre à quoi cela ressemblera au premier démarrage après avoir configuré le `global-override.json`, mais comme vous pouvez le voir, il semble y avoir un problème avec la case de sélection des jours fériés et l'affichage des données de l'historique des trajets. La section suivante explique comment résoudre ces problèmes.
 
@@ -568,7 +568,7 @@ Exemple : propriétés passées à l'intérieur de `recharts` dans `style.json`
 - Styliser au niveau du type de composant (par ex. recharts-bar) : le style sera appliqué à tous les composants qui partagent le type de composant spécifié  
 Exemple : propriétés passées à l'intérieur de `recharts-bar` dans `style.json`
 
-Prêt à relever ce défi ? 🧗🏽‍♂️ Apprenons à créer et modifier des graphiques !
+Découvrons maintenant comment créer et modifier des graphiques.
 
 :::info
 [Modifier et créer des graphiques personnalisés](/guides/public-cloud/data-platform/tutorials-app-development-components)

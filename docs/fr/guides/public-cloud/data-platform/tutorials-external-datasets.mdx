@@ -73,7 +73,7 @@ Vous remarquerez peut-être qu'en utilisant les *Datasets externes*, certains at
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/lakehouse-step6.png" loading="lazy" />
 
 :::info
-Notez que la Platform utilise les informations de métadonnées capturées lors de l'étape Analyzer pour créer automatiquement les tables et attribuer les noms et types d'attributs. Les fichiers sources fournis sont prêts à l'emploi ; toutefois, dans un Project réel, vous devriez utiliser l'Analyzer pour vérifier les sources de données avant de les glisser-déposer dans la page Tables.
+Notez que la Platform utilise les informations de métadonnées capturées lors de l'étape Analyzer pour créer automatiquement les tables et attribuer les noms et types d'attributs. Les fichiers sources fournis sont prêts à l'emploi ; toutefois, dans un Projet réel, vous devriez utiliser l'Analyzer pour vérifier les sources de données avant de les glisser-déposer dans la page Tables.
 :::
 
 #### Joindre des tables entre elles
@@ -126,15 +126,15 @@ Définissez l'attribut comme suit :
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/lakehouse-step12.png" loading="lazy" />
 
 :::info
-Pour le moment, cet attribut n'est pas physiquement spécifié, mais ne vous inquiétez pas ! Cela sera fait prochainement dans un autre composant : le Data Processing Engine.
+Pour le moment, cet attribut n'est pas physiquement spécifié. Cela sera fait plus loin dans un autre composant : le Data Processing Engine.
 :::
 
-[En savoir plus sur les Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
+[<span aria-hidden="true">↪</span> En savoir plus sur les Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
 
 ### Finaliser le build
 
 :::warning
-Une dernière petite vérification ✋ ! Assurez-vous de **vérifier deux fois que votre modèle de données ressemble exactement à celui des captures d'écran** avant de passer à l'étape suivante. Si certains attributs sont manquants, vous risquez de rester bloqué dans les étapes ultérieures du tutoriel.
+Une dernière petite vérification ! Assurez-vous de **vérifier deux fois que votre modèle de données ressemble exactement à celui des captures d'écran** avant de passer à l'étape suivante. Si certains attributs sont manquants, vous risquez de rester bloqué dans les étapes ultérieures du tutoriel.
 :::
 
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/lakehouse-step13.png" loading="lazy" />
@@ -163,7 +163,7 @@ Mais comment calculer cela avec la platform ? Une manière de le faire est de cr
 Ajouter ou modifier des virtual attributes ne nécessite pas de reconstruire le schéma.
 :::
 
-Basculez vers la page **Attributes**. Cette page liste tous les attributs physiques et virtuels de votre modèle de données, ainsi que le lineage de votre Project.
+Basculez vers la page **Attributes**. Cette page liste tous les attributs physiques et virtuels de votre modèle de données, ainsi que le lineage de votre Projet.
 
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/attributes-step1.png" loading="lazy" />
 
@@ -204,10 +204,10 @@ Ces actions Load vont physiquement extraire les données de vos sources et les c
 ### Créer plus d'actions
 
 :::info
-Notre Marketplace vous donne accès à une dizaine d'actions organisées pour démarrer rapidement vos Projects de traitement de données : des actions *load*, des actions *aggregate*, des actions *delete*, etc. Si vous ne trouvez pas ce dont vous avez besoin dans le catalogue, vous pouvez toujours recourir à une action *custom* qui vous permet d'**exécuter n'importe quel morceau de code Python 3+** dans le cadre de vos pipelines de données.
+Notre Marketplace vous donne accès à une dizaine d'actions organisées pour démarrer rapidement vos Projets de traitement de données : des actions *load*, des actions *aggregate*, des actions *delete*, etc. Si vous ne trouvez pas ce dont vous avez besoin dans le catalogue, vous pouvez toujours recourir à une action *custom* qui vous permet d'**exécuter n'importe quel morceau de code Python 3+** dans le cadre de vos pipelines de données.
 :::
 
-[En savoir plus sur les actions personnalisées](/guides/public-cloud/data-platform/dpe-actions-custom).
+[<span aria-hidden="true">↪</span> En savoir plus sur les actions personnalisées](/guides/public-cloud/data-platform/dpe-actions-custom).
 
 Pour ce tutoriel, vous allez créer une action utilisée pour agréger vos données dans la table *dataset_history* que vous avez créée dans la partie précédente.
 
@@ -250,7 +250,7 @@ END
 **Laisser un attribut de destination non mappé dans la configuration de l'action Aggregate déclenchera une erreur au lancement de l'action**. Si vous préférez laisser le champ de destination vide, veillez simplement à le retirer de la liste des attributs mappés.
 :::
 
-[En savoir plus sur les actions Aggregate](/guides/public-cloud/data-platform/dpe-actions-aggregate)
+[<span aria-hidden="true">↪</span> En savoir plus sur les actions Aggregate](/guides/public-cloud/data-platform/dpe-actions-aggregate)
 
 Cliquez sur **Create** en haut à droite.
 
@@ -259,14 +259,14 @@ Cliquez sur **Create** en haut à droite.
 **Vous avez maintenant généré toutes les actions** requises pour ce tutoriel.
 
 :::info
-Bien sûr, votre Project réel comportera probablement plus de 3 actions. Vous pouvez organiser vos actions en dossiers et les renommer si besoin. Vous pouvez également utiliser plus d'un repository, en particulier si vous travaillez en collaboration avec des coéquipiers. Les repositories d'actions peuvent être versionnés et également synchronisés avec des repositories Git externes. Consultez la page de [documentation produit dédiée](/guides/public-cloud/data-platform/dpe-actions-manage#gérer-les-actions) pour en savoir plus sur la façon de procéder !
+Bien sûr, votre Projet réel comportera probablement plus de 3 actions. Vous pouvez organiser vos actions en dossiers et les renommer si besoin. Vous pouvez également utiliser plus d'un repository, en particulier si vous travaillez en collaboration avec des coéquipiers. Les repositories d'actions peuvent être versionnés et également synchronisés avec des repositories Git externes. Consultez la page de [documentation produit dédiée](/guides/public-cloud/data-platform/dpe-actions-manage#gérer-les-actions) pour en savoir plus sur la façon de procéder !
 :::
 
-[En savoir plus sur les Actions dans la documentation produit](/guides/public-cloud/data-platform/landing-page-dpe-actions)
+[<span aria-hidden="true">↪</span> En savoir plus sur les Actions dans la documentation produit](/guides/public-cloud/data-platform/landing-page-dpe-actions)
 
 ## Workflows
 
-Les workflows sont comme un scénario de film pour mettre vos actions en... action. 🎬
+Un workflow définit l'ordre d'exécution de vos actions.
 
 Au sein d'un workflow, les actions sont organisées en stages séquentiels. Au sein d'un stage, toutes les actions seront exécutées en parallèle, tandis que les stages s'exécuteront toujours les uns après les autres. La même action peut être utilisée plusieurs fois dans le même workflow. Un workflow, tout comme une action, peut être lancé manuellement, configuré pour s'exécuter selon une planification, ou déclenché via un appel API.
 
@@ -285,7 +285,7 @@ Commençons par définir deux stages différents en cliquant sur **Add a stage**
 Après avoir créé le workflow (**create**), appuyez sur **Play**.
 
 :::info
-Veuillez noter que les workflows peuvent prendre quelques minutes ⏳ à s'exécuter lorsque vous les lancez pour la première fois. Le temps total ne devrait pas dépasser 10 minutes - si c'est le cas, veuillez contacter notre équipe support.
+Veuillez noter que les workflows peuvent prendre quelques minutes à s'exécuter lorsque vous les lancez pour la première fois. Le temps total ne devrait pas dépasser 10 minutes - si c'est le cas, veuillez contacter notre équipe support.
 :::
 
 Pendant que le workflow s'exécute, vous pouvez en profiter pour **le planifier pour qu'il s'exécute quotidiennement** à l'aide d'un trigger.
@@ -306,7 +306,7 @@ Appuyez sur le bouton **Confirm** pour créer le nouvel événement de trigger a
 Il y a bien plus que vous pouvez configurer dans les préférences d'un workflow. Notamment, vous pouvez [monter en charge horizontalement et verticalement](/guides/public-cloud/data-platform/dpe-jobs-resources) n'importe quel job de traitement, utiliser la [segmentation de charge de travail](/guides/public-cloud/data-platform/tutorials-segmentation) pour accélérer le traitement des données, et même sauvegarder toutes ces configurations pour une utilisation répétée grâce aux [environnements](/guides/public-cloud/data-platform/dpe-environments).
 :::
 
-[En savoir plus sur la configuration des préférences d'exécution.](/guides/public-cloud/data-platform/dpe-jobs-preferences)
+[<span aria-hidden="true">↪</span> En savoir plus sur la configuration des préférences d'exécution.](/guides/public-cloud/data-platform/dpe-jobs-preferences)
 
 :::warning
 Assurez-vous de cliquer sur le bouton **Save** en haut à droite de l'écran chaque fois que vous apportez une modification à vos workflows. Les actions sont stockées dans des repositories qui peuvent être versionnés, ce qui n'est pas le cas pour les workflows ou les environnements. *Autosave* est donc désactivé pour les workflows comme pour les environnements.
@@ -320,7 +320,7 @@ L'onglet Jobs résume **toutes les exécutions déclenchées dans le Data Proces
 
 <img className="thumbnail" alt="DPE Jobs" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/workflows-step6.png" loading="lazy" />
 
-Vous avez maintenant terminé la section Data Engineering du tutoriel *Getting Started* 🌟
+Vous avez maintenant terminé la section Data Engineering du tutoriel *Premiers pas*.
  
 Une bonne manière de vous assurer que vos données ont été correctement chargées est de retourner dans le [Lakehouse Manager](/guides/public-cloud/data-platform/landing-page-lakehouse-manager) et de regarder le nombre de lignes chargées dans la table. Ouvrez simplement le **mode d'affichage liste** et vérifiez la colonne *rows* ; si le champ affiche un nombre (indiquant combien de lignes ont été chargées), alors tout s'est bien passé.
 

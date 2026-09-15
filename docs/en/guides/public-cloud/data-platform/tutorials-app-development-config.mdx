@@ -25,7 +25,7 @@ You have now a complete application. Your app tree should look like this:
 
 Let's clarify the content of each directory:
 
-- `config`: Here is where most of magic happens. In this folder, you can define and update your configuration files for dashboards, menus, styles, translations etc... The most important file here is `global.json`, it allows you to declare and use all of these configuration files. (explained right after)
+- `config`: This folder holds most of the application configuration. In this folder, you can define and update your configuration files for dashboards, menus, styles, translations etc... The most important file here is `global.json`, it allows you to declare and use all of these configuration files. (explained right after)
 - `forepaas`: This is the equivalent of `node_modules` for the platform. It contains all the basic components needed to embed your application to Data Platform. All the packages listed in /forepaas.json are installed here.
 - `node_modules` : The node_modules folder contains libraries downloaded from npm. It is based on /package.json.
 - `public`: This folder contains all the static files (fonts, icons, images...). You can access a file stored in this folder through this url `/assets/{subfolder}/{name}.{extension}`.  
@@ -125,7 +125,7 @@ There are three variables that you need to replace:
 Remember that it is necessary to modify authentication privileges to allow to fetch your online data from your local build. Do it by adding your local host (*http://localhost:3333* by default) to the CORS origin in [*Identity Access Manager*](/guides/public-cloud/data-platform/landing-page-iam) > *Settings* > *CORS origin* > *Add*.
 :::
 
-Save all files. The locally running app now displays a bit more of an advanced view of what you had at the end of the Getting Started guide. 🤓
+Save all files. The locally running app now displays a bit more of an advanced view of what you had at the end of the Getting Started guide.
 
 The following image shows how it will look on the first start after configuring the `global-override.json` but as you can see there seems to be an issue with the holiday select box and the rides history data display. The following section explains how to resolve these problems.
 
@@ -568,7 +568,7 @@ Example: properties passed inside `recharts` in `style.json`
 - Style at the component type level (eg. recharts-bar): The style will be applied to all the components that share the specified component type  
 Example: properties passed inside `recharts-bar` in `style.json`
 
-Ready to take on this challenge? 🧗🏽‍♂️ Let's learn how to create and edit charts!
+Next, learn how to create and edit charts.
 
 :::info
 [Edit and create custom charts](/guides/public-cloud/data-platform/tutorials-app-development-components)

@@ -8,7 +8,7 @@ import { Tab, Tabs } from '@rspress/core/theme';
 
 ## Objectif
 
-Dans cet article, nous allons parcourir les étapes 🚶nécessaires pour **créer une action qui vous permet de gérer des événements**. Cela peut être appliqué pour déclencher des actions ou des workflows définis dans votre Data Processing Engine avec un corps de données provenant de l'extérieur de la platform.
+Dans cet article, nous allons parcourir les étapes nécessaires pour **créer une action qui vous permet de gérer des événements**. Cela peut être appliqué pour déclencher des actions ou des workflows définis dans votre Data Processing Engine avec un corps de données provenant de l'extérieur de la platform.
 
 ## Table de gestion des événements
 
@@ -36,7 +36,7 @@ D'une manière générale, il s'agit d'une bonne pratique à mettre en place si 
 
 Pour créer votre action personnalisée, rendez-vous dans le composant *Data Processing Engine* et créez une nouvelle action personnalisée, puis saisissez le **nom de l'action** *Event handle*. L'exemple de code Python ci-dessous montre comment gérer le corps de l'événement lorsque l'action est déclenchée depuis l'extérieur de la platform, généralement via un endpoint API.
 
-Dans la configuration de l'action personnalisée, changez le **nom de la fonction** (qui spécifie quelle fonction Python est la fonction principale à exécuter) en *event_handle*. Enfin, copiez-collez 💾 l'exemple de code suivant dans l'éditeur de code personnalisé :
+Dans la configuration de l'action personnalisée, changez le **nom de la fonction** (qui spécifie quelle fonction Python est la fonction principale à exécuter) en *event_handle*. Enfin, copiez-collez l'exemple de code suivant dans l'éditeur de code personnalisé :
 
 ```python
 import logging
@@ -82,7 +82,7 @@ Maintenant que vous savez comment gérer les informations d'événement entrante
 |action_id | Référence unique de votre action | 5eaf0db7f6f51d5255974217|
 |token | Token d'authentification | xxxxx|
 
-#### Sous-domaine du Project
+#### Sous-domaine du Projet
 
 Pour récupérer le sous-domaine de votre projet, il vous suffit de regarder l'URL de votre projet. Par exemple, si vous copiez-collez l'URL lorsque vous avez le composant DPE ouvert, cela devrait ressembler à ceci :
 ```text

@@ -35,14 +35,14 @@ L'onglet *All tables* vous donne accès à l'intégralité de vos données. L'on
 
 Concentrons-nous maintenant sur la création de vos tables principales et de leurs attributs.
 
-Tout d'abord, survolez avec votre curseur le bouton bleu ➕ **NEW TABLE** sur le côté droit de l'écran. Cela affichera les options de création :
+Tout d'abord, survolez avec votre curseur le bouton bleu ➕ **NOUVELLE TABLE** sur le côté droit de l'écran. Cela affichera les options de création :
 
-- Upload a file
-- Create from Connectors source
-- Create an empty tables
+- *Importer un fichier*
+- *Créer à partir d'une source Connectors*
+- *Créer une table vide*
 
 :::info
-Pour les besoins de ce tutoriel, nous allons procéder avec **Create from a Connectors source.** Pour créer une table en téléversant un fichier, reportez-vous à la documentation [create tables](/guides/public-cloud/data-platform/lakehouse-manager-tables#créer-une-table).
+Pour les besoins de ce tutoriel, nous allons procéder avec *Créer à partir d'une source Connectors*. Pour créer une table en important un fichier, reportez-vous à la documentation [Gérer une table](/guides/public-cloud/data-platform/lakehouse-manager-tables#créer-une-table).
 :::
 
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-started/app-init/picts/lakehouse-step2.png" loading="lazy" />
@@ -68,7 +68,7 @@ Notez qu'à chaque modification effectuée sur la page Tables, votre configurati
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-started/app-init/picts/lakehouse-step5.png" loading="lazy" />
 
 :::info
-Notez que la Platform utilise les informations de métadonnées capturées lors de l'étape Analyzer pour créer automatiquement les tables et attribuer les noms & types des attributs. Les fichiers source fournis sont prêts à l'emploi, cependant dans un Project réel vous devriez utiliser l'Analyzer pour vérifier les sources de données, avant de les glisser-déposer dans la page Tables.
+Notez que la Platform utilise les informations de métadonnées capturées lors de l'étape Analyzer pour créer automatiquement les tables et attribuer les noms & types des attributs. Les fichiers source fournis sont prêts à l'emploi, cependant dans un Projet réel vous devriez utiliser l'Analyzer pour vérifier les sources de données, avant de les glisser-déposer dans la page Tables.
 :::
 
 ### Créer votre table d'agrégation
@@ -107,15 +107,15 @@ Définissez l'attribut comme suit :
 <img className="thumbnail" alt="lakehouse manager" src="/images/public-cloud/data-platform/getting-started/app-init/picts/lakehouse-step11.png" loading="lazy" />
 
 :::info
-Pour le moment, cet attribut n'est pas physiquement spécifié, mais ne vous inquiétez pas ! Cela sera fait bientôt dans un autre composant : le Data Processing Engine.
+Pour le moment, cet attribut n'est pas physiquement spécifié. Cela sera fait plus loin dans un autre composant : le Data Processing Engine.
 :::
 
-[En savoir plus sur les Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
+[<span aria-hidden="true">↪</span> En savoir plus sur les Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
 
 ### Finaliser la construction
 
 :::warning
-Une dernière vérification rapide ✋ ! Assurez-vous de **bien vérifier que votre modèle de données ressemble exactement à celui des captures d'écran** avant de passer à l'étape suivante. Si certains attributs sont manquants, vous resterez bloqué lors des étapes ultérieures du tutoriel.
+Une dernière vérification rapide ! Assurez-vous de **bien vérifier que votre modèle de données ressemble exactement à celui des captures d'écran** avant de passer à l'étape suivante. Si certains attributs sont manquants, vous resterez bloqué lors des étapes ultérieures du tutoriel.
 :::
 
 Maintenant, cliquez sur l'icône *Build* (sous l'icône bleue ➕) pour créer/mettre à jour effectivement les tables et attributs dans votre dataset. Cela ne charge toujours pas les données dans les tables (ce qui sera fait dans le prochain article), cela applique simplement le schéma logique aux tables et attributs de votre dataset sous-jacent.
@@ -142,7 +142,7 @@ Mais comment la calculer avec la Platform ? Une façon de faire est de créer un
 Ajouter ou éditer des attributs virtuels ne nécessite pas de reconstruire le schéma.
 :::
 
-Passez à la page **Attributes**. Cette page répertorie tous les attributs physiques et virtuels de votre modèle de données, ainsi que le lineage de votre Project.
+Passez à la page **Attributes**. Cette page répertorie tous les attributs physiques et virtuels de votre modèle de données, ainsi que le lineage de votre Projet.
 
 <img className="thumbnail" alt="lakehouse manager" src="/images/public-cloud/data-platform/getting-started/app-init/picts/attributes-step1.png" loading="lazy" />
 

@@ -126,15 +126,15 @@ Define the attribute as such:
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/lakehouse-step12.png" loading="lazy" />
 
 :::info
-For the moment, this attribute is not physically specified but don't worry! It will be done soon in another component: the Data Processing Engine.
+For the moment, this attribute is not physically specified. This will be done later in another component: the Data Processing Engine.
 :::
 
-[Learn more about Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
+[<span aria-hidden="true">↪</span> Learn more about Tables](/guides/public-cloud/data-platform/lakehouse-manager-tables)
 
 ### Finalize the build
 
 :::warning
-One last quick check ✋! Make sure to **double-check that your data model looks exactly like the one in the screenshots** before moving to the next step. If some attributes are missing you will get stuck in later steps of the tutorial.
+One last quick check! Make sure to **double-check that your data model looks exactly like the one in the screenshots** before moving to the next step. If some attributes are missing you will get stuck in later steps of the tutorial.
 :::
 
 <img className="thumbnail" alt="Lakehouse Manager" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/lakehouse-step13.png" loading="lazy" />
@@ -207,7 +207,7 @@ These Load actions will physically extract the data from your sources and load i
 Our Marketplace gives you access to a dozen of curated actions to kick-start your data processing Projects: *load* actions, *aggregate* actions, *delete* actions, etc. If you cannot find what you need in the catalog, you can always resort to a *custom* action that allows you to **run any piece of Python 3+ code** as part of your data pipelines.
 :::
 
-[Learn more about custom actions](/guides/public-cloud/data-platform/dpe-actions-custom).
+[<span aria-hidden="true">↪</span> Learn more about custom actions](/guides/public-cloud/data-platform/dpe-actions-custom).
 
 For this tutorial, you will create an action used to aggregate your data into the *dataset_history* table you created in the previous part.
 
@@ -250,7 +250,7 @@ END
 **Leaving a destination attribute unmapped in the Aggregate action configuration will trigger an error when the action is launched**. If you'd rather leave the destination field empty, make sure to simply remove it from the list of mapped attributes.
 :::
 
-[Learn more about Aggregate actions](/guides/public-cloud/data-platform/dpe-actions-aggregate)
+[<span aria-hidden="true">↪</span> Learn more about Aggregate actions](/guides/public-cloud/data-platform/dpe-actions-aggregate)
 
 Click on **Create** at the top-right.
 
@@ -262,11 +262,11 @@ Click on **Create** at the top-right.
 Of course, your real-life Project will probably have more than 3 actions. You can organize your actions in folders and rename them if needed. You can also use more than one repository, especially if you are working in collaboration with teammates. Repositories of actions can be versioned and also synced with external Git repositories. Check-out the [dedicated product documentation](/guides/public-cloud/data-platform/dpe-actions-manage#manage-actions) page to learn more about how to do that!
 :::
 
-[Learn more about Actions in the Product Documentation](/guides/public-cloud/data-platform/landing-page-dpe-actions)
+[<span aria-hidden="true">↪</span> Learn more about Actions in the Product Documentation](/guides/public-cloud/data-platform/landing-page-dpe-actions)
 
 ## Workflows
 
-Workflows are like a movie script to put your actions into... action. 🎬
+A workflow defines the order in which your actions run.
 
 Within a workflow, actions are organized in sequential stages. Within a stage, all actions will be run in parallel while stages will always run one after the other. The same action can be used multiple times in the same workflow. A workflow, just like an action, can either be launched manually, set up to run on a schedule or triggered through an API call.
 
@@ -285,7 +285,7 @@ Let's start by defining two different stages by clicking on **Add a stage**. The
 After creating the workflow (**create**), press **Play**.
 
 :::info
-Please note that workflows might take a few minutes ⏳ to run when you launch them for the first time. The total time should not exceed 10 minutes - if it does, please reach out to our support team.
+Please note that workflows might take a few minutes to run when you launch them for the first time. The total time should not exceed 10 minutes - if it does, please reach out to our support team.
 :::
 
 While the workflow is running, something you can do is **schedule it to run daily** using a trigger.
@@ -306,7 +306,7 @@ Hit the **Confirm** button to create the new trigger event with the name of your
 There is a lot more you can configure in a workflow's preferences. Namely, you can [scale horizontally and vertically](/guides/public-cloud/data-platform/dpe-jobs-resources) any processing job, use [workload segmentation](/guides/public-cloud/data-platform/tutorials-segmentation) to accelerate the data processing and even save all these configurations for repeated use thanks to [environments](/guides/public-cloud/data-platform/dpe-environments).
 :::
 
-[Learn more about configuring the execution preferences.](/guides/public-cloud/data-platform/dpe-jobs-preferences)
+[<span aria-hidden="true">↪</span> Learn more about configuring the execution preferences.](/guides/public-cloud/data-platform/dpe-jobs-preferences)
 
 :::warning
 Make sure to click on the **Save** button on the top right of the screen whenever you make a modification to your workflows. Actions are stored in repositories which can be versioned which is not the case for workflows or environments. *Autosave* is therefore disabled for both workflows & environments.
@@ -320,7 +320,7 @@ The Jobs tab summarizes **all executions triggered in the Data Processing Engine
 
 <img className="thumbnail" alt="DPE Jobs" src="/images/public-cloud/data-platform/getting-further/data-models-with-external/picts/workflows-step6.png" loading="lazy" />
 
-You now have completed the Data Engineering section of the *Getting Started* tutorial 🌟
+You now have completed the Data Engineering section of the *Getting Started* tutorial.
  
 A good way to make sure your data properly loaded is to go back to the [Lakehouse Manager](/guides/public-cloud/data-platform/landing-page-lakehouse-manager) and look at the number of rows loaded into the table. Just open the **list view mode** and check the *rows* column, if the field has a number (indicating how many rows have been loaded) then everything worked well.
 

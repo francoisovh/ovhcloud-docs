@@ -20,7 +20,7 @@ Vous pouvez trouver votre `projectID` en cliquant sur l'icône d'information en 
 ## Utiliser l'AWS CLI
 
 :::info
-Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `my-project` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
+Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `my-project` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
 :::
 
 1. Installez le client AWS CLI depuis  https://aws.amazon.com/cli/
@@ -36,7 +36,7 @@ Default output format [None]:
 ```bash
 aws configure set s3.signature_version s3v4 --profile myproject
 ```
-1. Quelques exemples de commandes (en remplaçant `my-project` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet) et 'mybucket' par le nom de bucket souhaité) :
+1. Quelques exemples de commandes (en remplaçant `my-project` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet) et 'mybucket' par le nom de bucket souhaité) :
 
 ```bash
 # lister vos buckets
@@ -66,11 +66,11 @@ Pour gérer l'URL de point d'entrée au sein d'un profil nommé, vous pouvez con
 ## Utiliser Rclone
 
 :::info
-Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `my-project` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
+Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `my-project` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
 :::
 
 1. Installez [rclone](https://rclone.org/) depuis https://rclone.org/downloads/
-1. Configurez rclone (en remplaçant `my-project` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet)).
+1. Configurez rclone (en remplaçant `my-project` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet)).
 ```bash
 rclone config create my-project s3 provider Minio region forepaas env_auth false
 rclone config update my-project endpoint https://my-project.eu.dataplatform.ovh.net/datastore
@@ -138,7 +138,7 @@ rclone delete my-project:test-rclone/commands/
 ## Utiliser NodeJS
 
 :::info
-Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `[PROJECT_NAME]` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
+Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `[PROJECT_NAME]` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
 :::
 
 :::info
@@ -221,7 +221,7 @@ dataStoreClient.listObjects({
 ## Utiliser Python
 
 :::info
-Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `[PROJECT_NAME]` par le [sous-domaine de votre Project](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
+Dans les URL de base des extraits de code ci-dessous, vous devrez remplacer `[PROJECT_NAME]` par le [sous-domaine de votre Projet](/guides/public-cloud/data-platform/manage-projects-config-variables#sous-domaine-du-projet).
 :::
 
 :::info

@@ -9,7 +9,7 @@ lastUpdated: 2026-09-14
 Avec le framework React, vous pouvez **créer vos propres composants** depuis zéro. Ces composants peuvent être utilisés pour deux choses : les [paramètres dynamiques](/guides/public-cloud/data-platform/tutorials-app-development-custom-components#utiliser-un-composant-personnalisé-comme-paramètre-dynamique) et les [graphiques](/guides/public-cloud/data-platform/tutorials-app-development-custom-components#utiliser-un-composant-personnalisé-comme-graphique).
 
 :::info
-À tout moment, n'hésitez pas à consulter le [**Guide technique**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component) 🔧 pour en savoir plus sur les composants personnalisés !
+À tout moment, n'hésitez pas à consulter le [**Guide technique**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component) pour en savoir plus sur les composants personnalisés !
 :::
 
 ## Utiliser un composant personnalisé comme paramètre dynamique
@@ -72,14 +72,14 @@ Allez sur la page de votre application, remarquez que **le composant dynamic-wee
 
 <img className="thumbnail" alt="alt text" src="/images/public-cloud/data-platform/getting-further/app-dev/picts/dynamic-parameter-checkbox-1.png" loading="lazy" />
 
-Ne vous inquiétez pas s'il ne fonctionne pas encore, son comportement sera défini dans la section suivante.
+Le composant s'affiche mais n'est pas encore fonctionnel : son comportement est défini dans la section suivante.
 
 ### Modifier un composant
 
 Le framework utilisé dans ce guide sera React.
 
 :::info
-Nous allons vous guider étape par étape pour créer vos composants, mais si vous rencontrez des difficultés parce que vous n'êtes pas familier avec ce framework, vous pouvez consulter la documentation [ici](https://reactjs.org/docs/getting-started.html). 🆘
+Nous allons vous guider étape par étape pour créer vos composants, mais si vous rencontrez des difficultés parce que vous n'êtes pas familier avec ce framework, vous pouvez consulter la documentation [ici](https://reactjs.org/docs/getting-started.html).
 :::
 
 De plus, puisque nous travaillons avec des composants fonctionnels, nous allons utiliser l'une des dernières fonctionnalités disponibles, les **React Hooks**. Vous pouvez consulter cette [page](https://reactjs.org/docs/hooks-intro.html) pour plus d'informations.
@@ -309,7 +309,6 @@ return (
   <CheckboxGroup name='options' value={selectedOptions || []} onChange={onChange}>
   ...
 ```
-Vous y êtes presque ! 🚴‍♂️
 
 La dernière étape consiste à lier ce dynamic-parameter au [store global redux](https://redux.js.org/api/store) pour lui permettre d'affecter les requêtes des graphiques. Nous allons utiliser les hooks React Redux pour une approche plus moderne et rationalisée. Ajoutez ces lignes aux imports en haut du fichier :
 
@@ -360,7 +359,7 @@ Ce hook `useEffect` s'exécutera chaque fois que la valeur options (qui provient
 Votre paramètre dynamique est maintenant connecté au store global. Vous pouvez vous en assurer car les graphiques connectés à dynamic-weekday sont affectés par ce paramètre dynamique.
 
 Vous avez créé votre premier paramètre dynamique personnalisé.  
-Si vous vous êtes perdu 😪 en cours de route, pas d'inquiétude. Vous pouvez trouver le code final [ici](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/DynamicParameterCheckbox).
+Le code final est disponible [ici](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/DynamicParameterCheckbox).
 
 ### Ajouter une barre de recherche
 
@@ -895,7 +894,7 @@ Puis **enveloppez vos circle markers** dans `MarkerClusterGroup` comme ceci :
 ```
 
 Vous avez créé votre premier composant personnalisé.  
-Si vous vous êtes perdu, pas d'inquiétude. Vous pouvez trouver le code final [ici](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/ChartMap).
+Le code final est disponible [ici](https://github.com/forepaas/getting-started/tree/release/advanced/src/components/ChartMap).
 
 :::info
 Pour en savoir plus sur la création de vos composants personnalisés, consultez le [**Guide technique**](https://docs.dataplatform.ovh.net/#/en/technical/sdk/app/custom-component) !
@@ -912,7 +911,7 @@ Tout d'abord, vous devez exporter votre application au format zip. Votre fichier
 
 <img className="thumbnail" alt="alt text" src="/images/public-cloud/data-platform/getting-further/app-dev/picts/zip-getting-started.png" loading="lazy" />
 
-Vous pouvez également utiliser notre script préconstruit pour zipper votre application ; pour générer un fichier zip prêt à être chargé sur votre Project, exécutez simplement cette commande.
+Vous pouvez également utiliser notre script préconstruit pour zipper votre application ; pour générer un fichier zip prêt à être chargé sur votre Projet, exécutez simplement cette commande.
 
 ```bash
 yarn zip

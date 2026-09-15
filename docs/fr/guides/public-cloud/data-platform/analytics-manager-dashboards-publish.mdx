@@ -26,7 +26,7 @@ Chaque tableau de bord créé dans l'Analytics Manager peut être ouvert soit da
 Chaque mode **possède sa propre URL**. L'URL du mode édition dépend de la [version](/guides/public-cloud/data-platform/analytics-manager-queries#versionnage-des-requêtes) actuellement en cours d'édition. L'URL du mode live reste toujours la même, référençant le *shared_id* du tableau de bord qui reste identique d'une version à l'autre.
 
 :::info
-Toutes les URL nécessitent d'être [authentifié dans l'IAM du Project et d'avoir un accès accordé au tableau de bord](#donner-accès-au-tableau-de-bord) pour les ouvrir.
+Toutes les URL nécessitent d'être [authentifié dans l'IAM du Projet et d'avoir un accès accordé au tableau de bord](#donner-accès-au-tableau-de-bord) pour les ouvrir.
 :::
 
 ### Comment publier une version ?
@@ -54,7 +54,7 @@ Cela signifie que les éditeurs peuvent travailler sur une version du tableau de
 Plusieurs visiteurs peuvent facilement se voir accorder un accès au tableau de bord live, sans leur donner le droit de l'éditer.
 
 :::info
-Notez tout d'abord que les éditeurs comme les visiteurs du tableau de bord devront être enregistrés dans l'IAM d'un Project afin d'y accéder, même s'ils sont externes à la Platform. Ils n'accéderont qu'aux données/tableaux de bord associés à leurs [rôles et groupes](/guides/public-cloud/data-platform/landing-page-iam-users).
+Notez tout d'abord que les éditeurs comme les visiteurs du tableau de bord devront être enregistrés dans l'IAM d'un Projet afin d'y accéder, même s'ils sont externes à la Platform. Ils n'accéderont qu'aux données/tableaux de bord associés à leurs [rôles et groupes](/guides/public-cloud/data-platform/landing-page-iam-users).
 :::
 
 Le reste de cette page vise à expliquer comment donner un accès en lecture à un tableau de bord live à vos utilisateurs finaux. Il existe **deux modes habituels** de contrôle d'accès à un tableau de bord live.
@@ -89,7 +89,7 @@ L'ajout d'un nouvel utilisateur l'ajoutera dans l'Identity Access Manager avec l
 
 <img className="thumbnail" alt="dashboards" src="/images/public-cloud/data-platform/product/am/dashboards/picts/grant-access-add-new.png" loading="lazy" />
 
-Comme ces utilisateurs sont généralement des utilisateurs BI externes et non des utilisateurs de la Platform, il est probable qu'ils n'aient pas besoin de compte Platform. À la place, la Platform génère automatiquement un identifiant et un mot de passe simples pour eux via la **méthode d'authentification propre à l'IAM du Project** (appelée [**Project**](/guides/public-cloud/data-platform/iam-auth-providers#project)).
+Comme ces utilisateurs sont généralement des utilisateurs BI externes et non des utilisateurs de la Platform, il est probable qu'ils n'aient pas besoin de compte Platform. À la place, la Platform génère automatiquement un identifiant et un mot de passe simples pour eux via la **méthode d'authentification propre à l'IAM du Projet** (appelée [**Project**](/guides/public-cloud/data-platform/iam-auth-providers#project)).
 
 Avec ces identifiants, automatiquement partagés avec eux par e-mail, ils pourront s'authentifier sur l'URL du tableau de bord live et le consulter.
 

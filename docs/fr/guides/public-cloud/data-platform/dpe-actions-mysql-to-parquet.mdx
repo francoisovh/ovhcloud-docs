@@ -6,7 +6,7 @@ lastUpdated: 2026-09-14
 
 ## Objectif
 
-L'action *MySQL to Parquet* offre un moyen simplifié de **transférer une table depuis une source MySQL, configurée dans vos Connectors, directement vers un bucket du Project.** Les données de votre table MySQL seront stockées dans un format de fichier Parquet hautement efficace au sein du bucket de stockage objet de votre choix.
+L'action *MySQL to Parquet* offre un moyen simplifié de **transférer une table depuis une source MySQL, configurée dans vos Connectors, directement vers un bucket du Projet.** Les données de votre table MySQL seront stockées dans un format de fichier Parquet hautement efficace au sein du bucket de stockage objet de votre choix.
 
 ## Configurer une action MySQL to Parquet
 
@@ -30,7 +30,7 @@ Tout d'abord, vous devez sélectionner la table MySQL spécifique que vous souha
 
 Ensuite, vous définirez le bucket de destination et le chemin du dossier où votre ou vos fichiers Parquet seront stockés.
 
-1.  **Choisir le bucket de destination :** Sélectionnez un [bucket du Project](/guides/public-cloud/data-platform/lakehouse-manager-buckets) disponible dans la liste où votre ou vos fichiers Parquet seront stockés.
+1.  **Choisir le bucket de destination :** Sélectionnez un [bucket du Projet](/guides/public-cloud/data-platform/lakehouse-manager-buckets) disponible dans la liste où votre ou vos fichiers Parquet seront stockés.
 <img className="thumbnail" alt="Sélectionner le bucket et le chemin de destination — Mysql to parquet" src="/images/public-cloud/data-platform/product/dpe/actions/mysql-to-parquet/picts/mysql-to-parquet-3.png" loading="lazy" />
 2.  **Spécifier le chemin du dossier :** Dans le champ situé sous la sélection du bucket de destination, vous spécifierez le chemin de dossier souhaité au sein du bucket.
     -   **Exemple :** Si vous souhaitez que vos données soient stockées dans un dossier nommé `my_mysql_data` à l'intérieur d'un répertoire `raw_data`, vous saisiriez `raw_data/my_mysql_data/`.

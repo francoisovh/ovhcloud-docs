@@ -11,11 +11,12 @@ In a [Custom action](/guides/public-cloud/data-platform/dpe-actions-custom), you
 Here is an example of re-using a [Load action](/guides/public-cloud/data-platform/dpe-actions-load), adding a mapping value equals to the date contained in the source filename.
 
 :::info
-**Some requirements to follow :**
-:::
+**Some requirements to follow:**
 
 1. select the `aggregate` module in the required modules
 1. your JSON `params` must follow the [required format for the load action](/guides/public-cloud/data-platform/dpe-actions-load-advanced-mode)  
+
+:::
 **Tip** : you may first create your action configuration through a regular Load action, then copy / paste the "params" JSON object into your custom action JSON `params` object.
 
 ```python
