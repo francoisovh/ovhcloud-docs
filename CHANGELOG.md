@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026.09.15
+
+### Features
+- **vps:** translate the native Valheim guide to de, es, it, pl, pt
+- **vps:** update the Valheim guide for the native Game Panel image
+- add the web-hosting cpnav key and tokenize its blocks
+- **i18n:** translate the Data Platform sidebar labels to French
+
+### Fixes
+- split the DNS zone cpnav key by the path each guide documents
+- **data-platform:** align FR terminology and neutralise tutorial register
+- **i18n:** restore diacritics in internal anchor links (#777)
+- **data-platform:** align the French translations with the EN source fixes
+
+### Maintenance
+- tokenize the Web Cloud Databases cpnav blocks
+
+### Documentation
+- 2611 guides updated across de, en, es, fr, it, pl, pt
+
 ## 2026.09.14
 
 ### Features
