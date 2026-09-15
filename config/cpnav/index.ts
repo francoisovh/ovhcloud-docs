@@ -48,6 +48,7 @@ import { publiccloudUsersRoles } from './keys/publiccloud-users-roles';
 import { publiccloudVolumeSnapshot } from './keys/publiccloud-volume-snapshot';
 import { securityKms } from './keys/security-kms';
 import { webCloudDatabases } from './keys/web-cloud-databases';
+import { webHosting } from './keys/web-hosting';
 import { webEmailPro } from './keys/web-email-pro';
 import { webExchange } from './keys/web-exchange';
 import { webMxPlan } from './keys/web-mx-plan';
@@ -56,6 +57,7 @@ import type { CpNavKey } from './types';
 
 export const CPNAV_KEYS: Record<string, CpNavKey> = {
   // --- Web Cloud, in Manager sidebar order -------------------------------------------
+  'web-hosting': webHosting,
   'web-cloud-databases': webCloudDatabases,
   'web-zimbra': webZimbra,
   'web-email-pro': webEmailPro,
