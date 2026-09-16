@@ -6,7 +6,7 @@ lastUpdated: 2026-07-30
 
 ## Objectif
 
-OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux autres connexions OVHcloud Connect Provider, une connexion Google n'est pas activée à l'aide d'une clé de service : vous générez une **clé d'appairage** (pairing key) dans la console Google Cloud, puis vous la transmettez à OVHcloud, qui la consomme pour provisionner la connexion.
+OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux connexions avec les autres providers, la clé de service (appelée **clé d'appairage**, ou *pairing key*, dans la terminologie Google Cloud) est générée dans la console Google Cloud, puis renseignée côté OVHcloud pour provisionner la connexion.
 
 **Dans ce guide, vous allez apprendre à :**
 
@@ -29,7 +29,7 @@ OVHcloud Connect Cross Cloud avec GCP est une connexion OVHcloud Connect de type
 
 Deux caractéristiques la distinguent d'une connexion OVHcloud Connect Provider standard :
 
-- Elle utilise une **clé d'appairage** générée dans Google Cloud, et non une clé de service OVHcloud. Aucune clé de service n'est émise ni envoyée par e-mail pour une connexion Google.
+- Sa clé de service est une **clé d'appairage** générée dans Google Cloud. OVHcloud n'émet ni n'envoie par e-mail de clé de service pour une connexion Google.
 - Il s'agit toujours d'un service de **niveau 3 (BGP)**. La couche 2 n'est pas prise en charge, et la configuration du PoP est créée automatiquement lorsqu'OVHcloud consomme la clé d'appairage : vous n'avez pas à l'ajouter ni à la supprimer manuellement.
 
 ## En pratique
@@ -45,6 +45,10 @@ Deux caractéristiques la distinguent d'une connexion OVHcloud Connect Provider 
 - [Étape 6 - Vérifier la session BGP et le routage](#step-6)
 - [Limitations](#limitations)
 - [Dépannage](#troubleshooting)
+
+:::info
+Les étapes 1 et 2 sont interchangeables. Vous pouvez également commencer dans la console Google Cloud en créant le rattachement de VLAN Partner Interconnect, en cochant l'option d'activation automatique pour ne pas avoir à y revenir, puis effectuer les étapes restantes dans l'espace client OVHcloud.
+:::
 
 ### Fonctionnement <a name="how-it-works"></a>
 
@@ -72,16 +76,14 @@ La connexion repose sur les paramètres fixes suivants :
 | ASN OVHcloud | `65509` | ASN présenté par OVHcloud sur le rattachement Google. |
 | Format de la clé d'appairage | `{uuid}/{region}/{availabilityDomain}` | Générée par Google. Voir l'[étape 2](#step-2). |
 | Surréservation | 1:2 | OVHcloud respecte la politique de surréservation 1:2 de Google sur l'interconnexion. |
-| Nombre maximal de préfixes BGP | `100`, `1000` ou `3000` | Nombre maximal de routes acceptées depuis votre réseau. |
+| Nombre maximal de préfixes BGP | `100` | Jusqu'à 100 préfixes peuvent être annoncés par session BGP. |
 
 ### Étape 1 - Commander OVHcloud Connect pour une connexion Google <a name="step-1"></a>
 
-Vous commandez OVHcloud Connect Cross Cloud avec GCP en tant que service OVHcloud Connect Provider. Commandez-le depuis la [page produit OVHcloud Connect](/links/network/ovhcloud-connect), en sélectionnant Google comme provider et un PoP proposant Google Cloud Partner Interconnect.
-
-{/* DRAFT: À vérifier — confirmer le chemin de commande exact et la formulation de la sélection de l'offre/du provider pour une connexion Google (Cross Cloud) sur le site OVHcloud. */}
+Depuis la [page produit OVHcloud Connect](/links/network/ovhcloud-connect), commandez un service OVHcloud Connect Provider et sélectionnez Google comme provider. Seuls les PoP éligibles apparaissent dans la sélection.
 
 :::info
-Une connexion Google ne génère pas de clé de service. Là où les autres commandes OVHcloud Connect Provider vous envoient une clé de service par e-mail, une connexion Google est activée à l'aide d'une clé d'appairage que vous créez dans Google Cloud (voir l'étape suivante).
+OVHcloud n'émet aucune clé de service pour les connexions avec Google Cloud. Le service est activé à l'aide d'une clé d'appairage générée dans votre console Google Cloud (voir l'étape suivante).
 :::
 
 ### Étape 2 - Créer le rattachement de VLAN et la clé d'appairage dans Google Cloud <a name="step-2"></a>
@@ -114,9 +116,9 @@ Créez le rattachement de VLAN dans la région et le domaine de disponibilité c
 
 ### Étape 3 - Transmettre la clé d'appairage à OVHcloud <a name="step-3"></a>
 
-Transmettez la clé d'appairage à OVHcloud afin que la connexion soit provisionnée. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
+Transmettez la clé d'appairage à OVHcloud depuis votre espace client OVHcloud ou via l'API OVHcloud, afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
 
-{/* DRAFT: À vérifier — confirmer le canal côté client utilisé pour transmettre la clé d'appairage à OVHcloud (ticket support, champ dans l'espace client, ou suivi de commande). L'étape de consommation interne est côté opérateur et ne doit pas être décrite ici. */}
+{/* DRAFT: À vérifier — la clé est transmise via l'espace client ou l'API (source : spécification de service). Confirmer l'écran et le champ exacts, et si elle est transmise avec la commande ou après livraison. */}
 
 ### Étape 4 - OVHcloud provisionne la connexion <a name="step-4"></a>
 
@@ -174,7 +176,7 @@ Pour lancer un diagnostic depuis l'espace client OVHcloud, consultez le guide [C
 | Configuration PoP automatique | Une seule configuration PoP est créée par connexion, automatiquement lors de la consommation de la clé d'appairage. Elle ne peut pas être ajoutée ni supprimée manuellement depuis l'espace client ou l'API OVHcloud. |
 | Suppression de la configuration PoP | La configuration du PoP est supprimée uniquement lors de la résiliation de la connexion. Il n'existe pas d'action autonome permettant de supprimer cette configuration pour une connexion Google. |
 | ASN fixes | Le côté Google utilise l'ASN `16550` et le côté OVHcloud l'ASN `65509`. Ces valeurs sont définies par le processus de provisionnement et ne sont pas personnalisables. |
-| Nombre maximal de préfixes BGP | Le nombre de routes acceptées depuis votre réseau est limité à `100`, `1000` ou `3000`. |
+| Nombre maximal de préfixes BGP | Jusqu'à `100` préfixes peuvent être annoncés par session BGP, comme pour toute connexion OVHcloud Connect de niveau 3. |
 | Surréservation | L'interconnexion respecte la politique de surréservation 1:2 de Google. |
 
 Pour la liste complète des capacités et limites techniques d'OVHcloud Connect, consultez le guide [Capacités et limites techniques](/guides/network/ovhcloud-connect/occ-limits).
@@ -186,9 +188,7 @@ Pour la liste complète des capacités et limites techniques d'OVHcloud Connect,
 | Clé d'appairage refusée | La clé ne respecte pas le format `{uuid}/{region}/{availabilityDomain}`, ou a été tronquée lors de la copie. | Copiez à nouveau la clé d'appairage complète depuis la console Google Cloud, en conservant les trois segments. |
 | Connexion bloquée au statut `doing` | La région ou le domaine de disponibilité du rattachement de VLAN ne correspond pas au PoP OVHcloud, ou le rattachement n'est pas prêt côté Google. | Vérifiez la région et le domaine de disponibilité du rattachement de VLAN, et assurez-vous qu'il est bien créé et en attente d'appairage dans Google Cloud. |
 | Session BGP qui ne s'établit pas | Le rattachement est provisionné mais le routage n'a pas encore convergé, ou les paramètres du Cloud Router sont incomplets. | Vérifiez le statut du rattachement de VLAN et du Cloud Router dans Google Cloud. La session utilise l'ASN `16550` (Google) et `65509` (OVHcloud). |
-| Certaines routes ne sont pas apprises | Votre réseau annonce plus de préfixes que le nombre maximal de préfixes BGP configuré. | Réduisez le nombre de préfixes annoncés, ou demandez une valeur de nombre maximal de préfixes BGP plus élevée (`100`, `1000` ou `3000`). |
-
-{/* DRAFT: À vérifier — confirmer l'action côté client permettant de demander une modification de la valeur du nombre maximal de préfixes BGP sur une connexion Google. */}
+| Certaines routes ne sont pas apprises | Votre réseau annonce plus de `100` préfixes par session BGP. | Réduisez le nombre de préfixes annoncés. Si votre architecture en exige davantage, contactez les équipes du support. |
 
 ## Aller plus loin
 
