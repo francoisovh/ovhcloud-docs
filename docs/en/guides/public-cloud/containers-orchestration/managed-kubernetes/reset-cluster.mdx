@@ -17,7 +17,7 @@ Through the OVHcloud Control Panel and the API, you can reset your OVHcloud Mana
 
 :::info
 During a reset, all data in the ETCD will be deleted (pods, deployments, services, secrets, CRDs, etc.). Similarly, load balancers and also all PVC (Persistent Volume Claim) with their PCI cinder volumes will be deleted.
-Nodes will be either deleted or reinstalled (depending on the option you set during the reset).(depending on the option you set during the reset).
+Nodes will be either deleted or reinstalled (depending on the option you set during the reset).
 
 :::
 
@@ -37,19 +37,19 @@ The whole cluster configuration is reset but some values can be defined (optiona
 
 - an OVHcloud Managed Kubernetes cluster
 
-[[cpnav:publiccloud-kubernetes]]
+[[cpnav:publiccloud-kubernetes|en]]
 
 ## Instructions
 
 ### Reset a Kubernetes cluster on the OVHcloud Control Panel
 
-#### Step 1 - Ask for cluster reset on the OVHcloud Control Panel 
+#### Step 1 - Ask for cluster reset on the OVHcloud Control Panel
 
 Click on your Kubernetes cluster name to open its details page. Go to the **Service** tab of the administration UI, then click on **Reset your cluster**.
 
 #### Step 2 - Choose the type of reset you want
 
-You have two options on the reset menu, *Delete* and *Reinstall*. 
+You have two options on the reset menu, *Delete* and *Reinstall*.
 
 - Choosing *Delete nodes* means that the current cluster nodes are deleted, and the cluster is reinitialized to an empty state.
 
@@ -59,7 +59,7 @@ In the reset dialog, select either **Delete nodes** or **Keep and reinstall node
 
 Click on the <code className="action">Confirm</code> button to continue.
 
-#### Step 3 - Wait for the resetting to end 
+#### Step 3 - Wait for the resetting to end
 
 Depending on the chosen kind of reset, the process can take several minutes. During that time, a message on the manager warns you that the cluster is under resetting:
 
@@ -141,7 +141,7 @@ You should receive a response with `null` content. This message will be improved
 
 ## Go further
 
-To have an overview of OVHcloud Managed Kubernetes service, you can go to the [OVHcloud Managed Kubernetes page](https://www.ovhcloud.com/en-gb/public-cloud/kubernetes/).
+To have an overview of OVHcloud Managed Kubernetes service, you can go to the [OVHcloud Managed Kubernetes page](/links/public-cloud/kubernetes).
 
 Otherwise to skip it and learn more about using your Kubernetes cluster the practical way, we invite you to look at our [tutorials](/guides/public-cloud/containers-orchestration/managed-kubernetes/overview).
 
