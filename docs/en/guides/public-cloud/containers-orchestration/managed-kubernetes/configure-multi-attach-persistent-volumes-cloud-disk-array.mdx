@@ -10,11 +10,11 @@ import Api from '@components/Api';
 ## Objective
 
 OVHcloud Managed Kubernetes natively integrates Block Storage as persistent volumes. This technology may however not be suited to some legacy or non cloud-native applications, often requiring to share this persistent data accross different pods on multiple worker nodes (ReadWriteMany or RWX). If you would need to do this for some of your workloads, one solution is to use CephFS volumes.<br/>
-[OVHcloud Cloud Disk Array](https://www.ovhcloud.com/en-gb/storage-solutions/cloud-disk-array/) is a managed solution that lets you easily configure a Ceph cluster and multiple CephFS volumes. In this tutorial we are going to see how to configure your OVHcloud Managed Kubernetes cluster to use [OVHcloud Cloud Disk Array](https://www.ovhcloud.com/en-gb/storage-solutions/cloud-disk-array/) as a CephFS provider for [Kubernetes Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
+[OVHcloud Cloud Disk Array](/links/storage/cloud-disk-array) is a managed solution that lets you easily configure a Ceph cluster and multiple CephFS volumes. In this tutorial we are going to see how to configure your OVHcloud Managed Kubernetes cluster to use [OVHcloud Cloud Disk Array](/links/storage/cloud-disk-array) as a CephFS provider for [Kubernetes Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/).
 
 ## Requirements
 
-This tutorial assumes that you already have a working [OVHcloud Managed Kubernetes](https://www.ovhcloud.com/en-gb/public-cloud/kubernetes/) cluster, and some basic knowledge of how to operate it. If you want to know more on those topics, please look at the [deploying a Hello World application](/guides/public-cloud/containers-orchestration/managed-kubernetes/deploy-hello-world) documentation.
+This tutorial assumes that you already have a working [OVHcloud Managed Kubernetes](/links/public-cloud/kubernetes) cluster, and some basic knowledge of how to operate it. If you want to know more on those topics, please look at the [deploying a Hello World application](/guides/public-cloud/containers-orchestration/managed-kubernetes/deploy-hello-world) documentation.
 
 It also assumes you have an OVHcloud Cloud Disk Array already available. If you don't, you can <ManagerLink to="/">order one in the OVHcloud Control Panel</ManagerLink>.
 
@@ -84,7 +84,7 @@ You can also use the following API endpoint to retrieve your OVHcloud Internet G
 If you want to use your Kubernetes cluster to retrieve your Gateway Public's IP, run this command:
 
 ```bash
-kubectl run get-gateway-ip --image=ubuntu:latest -i --tty --rm 
+kubectl run get-gateway-ip --image=ubuntu:latest -i --tty --rm
 ```
 
 This will create a temporary pod and open a console.

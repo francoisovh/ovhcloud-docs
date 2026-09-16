@@ -94,7 +94,7 @@ Make sure Velero on the new cluster points to the same OVHcloud S3-compatible<su
 
 Example of checking available backups:
 
-```sh
+```bash
 velero backup get <backupName>
 ```
 
@@ -104,7 +104,7 @@ Replace `<backupName>` with the name of your backup.
 
 Use the Velero CLI to restore resources from a backup:
 
-```sh
+```bash
 velero restore create --from-backup <backupName>
 ```
 
@@ -116,7 +116,7 @@ You can add options such as --include-namespaces or --exclude-resources to fine-
 
 Once the restore is complete, check that your workloads, services, and configurations are correctly running:
 
-```sh
+```bash
 # List the restores
 velero restore get
 

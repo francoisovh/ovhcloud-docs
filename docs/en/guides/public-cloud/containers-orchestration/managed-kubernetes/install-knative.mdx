@@ -222,12 +222,12 @@ kubectl get service kourier -n kourier-system
 Here is an example of the result:
 
 ```console
-$ kubectl get service kourier -n kourier-system 
+$ kubectl get service kourier -n kourier-system
 NAME      TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)                      AGE
 kourier   LoadBalancer   10.3.15.239   135.125.83.166   80:31357/TCP,443:31782/TCP   2m19s
 ```
 
-    Warning: As the `LoadBalancer` creation is asynchronous, and the provisioning of the load balancer can take several minutes, you will surely get a `<pending>` state for the `EXTERNAL-IP` field. Please try again in a few minutes to get the external IP. 
+    Warning: As the `LoadBalancer` creation is asynchronous, and the provisioning of the load balancer can take several minutes, you will surely get a `<pending>` state for the `EXTERNAL-IP` field. Please try again in a few minutes to get the external IP.
 
 Save this to use in the following Configure DNS section.
 
