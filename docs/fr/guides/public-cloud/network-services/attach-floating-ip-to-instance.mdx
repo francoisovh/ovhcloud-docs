@@ -40,16 +40,7 @@ Ensuite, vous utiliserez cette Floating IP pour vous connecter à l'instance (VM
 
 ## En pratique
 
-{/* CP-NAV-START:publiccloud-projects */}
----
-
-### Accès à l'espace client OVHcloud
-
-- **Lien direct :** <ManagerLink to="/#/pci/projects">Projets Public Cloud</ManagerLink>
-- **Pour accéder à vos services :** <code className="action">Public Cloud</code> > Sélectionnez votre projet
-
----
-{/* CP-NAV-END:publiccloud-projects */}
+[[cpnav:publiccloud-public-ips]]
 
 ### Attacher une Floating IP à une instance
 
@@ -539,7 +530,7 @@ Remplissez les champs selon le tableau suivant :
     |ip|L'IP privée de l'instance à associer à la Floating IP|
     
     :::info
-    Le corps de la requête accepte également un objet `gateway` facultatif, utilisé pour créer une nouvelle Gateway en même temps. Comme ce guide suppose que le réseau privé de votre instance est déjà relié à une Gateway (voir les [Prérequis](#prerequis)), ne l'incluez pas dans la requête.
+    Le corps de la requête accepte également un objet `gateway` facultatif, utilisé pour créer une nouvelle Gateway en même temps. Comme ce guide suppose que le réseau privé de votre instance est déjà relié à une Gateway (voir les [Prérequis](#prérequis)), ne l'incluez pas dans la requête.
 
     :::
 

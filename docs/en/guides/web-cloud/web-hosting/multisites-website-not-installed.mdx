@@ -25,7 +25,49 @@ This guide is designed to help you with common tasks. Nevertheless, we recommend
 Some procedures in this guide apply to the <ManagerLink to="/beta/#/">new version of the OVHcloud Control Panel</ManagerLink>.
 A reminder is shown at the beginning of each affected section.
 
-:::
+[[cpnav:web-hosting]]
+
+## Instructions
+
+The "**Site not installed**" page appears for two reasons:
+
+- 1: [Your domain name or subdomain is not declared correctly on your web hosting plan](#check-multisites).
+- 2: [Your domain name is not linked to the IP address of your web hosting plan.](#check-dns-domain).
+
+The following steps will allow you to correct the "Site not installed" error in both cases.
+
+### 1 - Verify the declaration of your domain name or subdomain on your web hosting plan <a name="check-multisites"></a>
+
+Click on the tabs below to view each of the **4** steps in succession.
+
+<Tabs>
+  <Tab label="Step 1">
+    Log in to the <ManagerLink to="/">OVHcloud Control Panel</ManagerLink>, then go to the <code className="action">Web Cloud</code> section.
+    
+    <img className="thumbnail" alt="Web Cloud" src="/images/assets/screens/control-panel/product-selection/web-cloud.png" loading="lazy" />
+  </Tab>
+  <Tab label="Step 2">
+    Click the <code className="action">Hosting plans</code> menu, then select the web hosting plan concerned.
+    
+    <img className="thumbnail" alt="Web Hosting" src="/images/assets/screens/control-panel/product-selection/web-cloud/hosting-plans.png" loading="lazy" />
+  </Tab>
+  <Tab label="Step 3">
+    On the page that pops up, click on the <code className="action">Multisite</code> tab.
+    
+    <img className="thumbnail" alt="Multisite" src="/images/assets/screens/control-panel/product-selection/web-cloud/web-hosting/general-information/multisite.png" loading="lazy" />
+  </Tab>
+  <Tab label="Step 4">
+    On the new page that opens, a table appears.
+    
+    <img className="thumbnail" alt="Multisite interface" src="/images/assets/screens/control-panel/product-selection/web-cloud/web-hosting/multisite/tab.png" loading="lazy" />
+    
+    |Scenarios|Actions to Take|
+    |---|---|
+    |The domain name or subdomain linked to your website **appears** in the "multisite" table.|If you have just added your domain name or subdomain to the <code className="action">Multisite</code> section of your web hosting plan, please wait around **twenty minutes**, then refresh your web browser cache. If the message "Site not installed" still appears, go to [part 2](#check-dns-domain).|
+    |The domain or subdomain linked to your website **does not appear** in the "multisite" table.|Add your domain or subdomain to the <code className="action">Multisite</code> section by following the dedicated section in the guide "[Hosting multiple websites on your web hosting plan - adding a domain or subdomain](/guides/web-cloud/web-hosting/multisites-configure-multisite)".|
+    |The domain or subdomain **has been removed** from the "multisite" table without any action on your part.|Your domain or its DNS zone may be managed from another account. Add your domain or subdomain in the <code className="action">Multisite</code> section by following the dedicated section of the guide "[Hosting multiple websites on your Web Hosting plan - adding an external domain name](/guides/web-cloud/web-hosting/multisites-configure-multisite)".|
+  </Tab>
+</Tabs>
 
 ### 2 - Check the IP pointing in your domain name's active DNS zone <a name="check-dns-domain"></a>
 
