@@ -1,7 +1,7 @@
 ---
 title: Configuring an Additional IP block in a vRack
 description: This guide will show you how to configure a block of public IP addresses for use with the vRack
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-21
 ---
 import { Tab, Tabs } from '@rspress/core/theme';
 
@@ -237,11 +237,13 @@ Before you begin, download and install **iproute2**, a package for manual IP rou
 
 Establish an SSH connection to your server and run the following command from the command line. This will download and install iproute2.
 
+**Ubuntu & Debian**
+
 ```sh
 sudo apt-get install iproute2
 ```
 
-**Fedora**
+**Fedora, AlmaLinux & Rocky Linux**
 
 ```sh
 sudo dnf install iproute
@@ -250,7 +252,7 @@ sudo dnf install iproute
 #### GNU/Linux configurations
 
 <Tabs>
-<Tab label="AlmaLinux and Rocky Linux (8/9)">
+<Tab label="AlmaLinux & Rocky Linux (8)">
 **Create the file for the secondary network interface**
 
 First, copy the primary network interface configuration and adjust it as needed:
@@ -391,7 +393,7 @@ Apply the configuration with the following command:
 sudo netplan apply
 ```
 </Tab>
-<Tab label="Fedora 43+, AlmaLinux and Rocky Linux (10)">
+<Tab label="Fedora 43+, AlmaLinux & Rocky Linux (9/10)">
 First, verify the name of your vRack interface. In our example, the interface is called `eno2`:
 
 ```sh
@@ -441,12 +443,24 @@ sudo nmcli connection modify 'vRack' connection.autoconnect yes
 By default, traffic destined for your vRack IP may not use the vRack interface for the return path. This can cause asymmetric routing, and some networks may reject the traffic. The steps below configure a separate routing table for vRack traffic, ensuring that responses from the vRack IP are routed back through the vRack interface.
 :::
 
-- Create the vRack routing table
+- Create a new IP routing table
 
-In our example, we use 1 as the ID but feel free to use any number of your choice. The commands below reference the table by its ID (`table=1`); the name `vrack` is just so you can read it more easily later, for example with `ip route show table vrack`.
+Next, we need to create a new IP route for the vRack. We'll be adding a new traffic rule (`1 vrack`) by amending the file, as shown below:
+
 
 ```sh
-echo "1 vrack" | sudo tee -a /etc/iproute2/rt_tables
+sudo nano /usr/share/iproute2/rt_tables
+#
+# reserved values
+#
+255	local
+254	main
+253	default
+0	unspec
+#
+# local
+#
+#1	inr.ruhep
 1 vrack
 ```
 

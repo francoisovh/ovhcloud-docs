@@ -1,7 +1,7 @@
 ---
 title: Konfiguracja bloku Additional IP w sieci vRack
 description: Ten przewodnik pokazuje, jak skonfigurować blok publicznych adresów IP do użytku z siecią vRack
-lastUpdated: 2026-09-16
+lastUpdated: 2026-09-21
 ---
 import { Tab, Tabs } from '@rspress/core/theme';
 
@@ -237,11 +237,13 @@ Zanim zaczniesz, pobierz i zainstaluj pakiet **iproute2**, który umożliwia rę
 
 Nawiąż połączenie SSH z serwerem i uruchom z wiersza poleceń poniższe polecenie. Spowoduje to pobranie i zainstalowanie pakietu iproute2.
 
+**Ubuntu & Debian**
+
 ```sh
 sudo apt-get install iproute2
 ```
 
-**Fedora**
+**Fedora, AlmaLinux & Rocky Linux**
 
 ```sh
 sudo dnf install iproute
@@ -250,7 +252,7 @@ sudo dnf install iproute
 #### Konfiguracje GNU/Linux
 
 <Tabs>
-<Tab label="AlmaLinux i Rocky Linux (8/9)">
+<Tab label="AlmaLinux & Rocky Linux (8)">
 **Utwórz plik dla dodatkowego interfejsu sieciowego**
 
 Najpierw skopiuj konfigurację głównego interfejsu sieciowego i dostosuj ją do własnych potrzeb:
@@ -391,7 +393,7 @@ Zastosuj konfigurację za pomocą następującego polecenia:
 sudo netplan apply
 ```
 </Tab>
-<Tab label="Fedora 43+, AlmaLinux i Rocky Linux (10)">
+<Tab label="Fedora 43+, AlmaLinux & Rocky Linux (9/10)">
 Najpierw sprawdź nazwę swojego interfejsu vRack. W naszym przykładzie interfejs nazywa się `eno2`:
 
 ```sh
@@ -441,12 +443,24 @@ sudo nmcli connection modify 'vRack' connection.autoconnect yes
 Domyślnie ruch kierowany do Twojego adresu IP w sieci vRack może nie korzystać z interfejsu vRack w drodze powrotnej. Może to powodować asymetryczny routing, który niektóre sieci mogą odrzucać. Poniższe kroki konfigurują osobną tabelę routingu dla ruchu vRack, zapewniając, że odpowiedzi z adresu IP w sieci vRack są kierowane z powrotem przez interfejs vRack.
 :::
 
-- Utwórz tabelę routingu dla vRack
+- Utwórz nową tabelę routingu IP
 
-W naszym przykładzie jako identyfikatora używamy 1, ale możesz swobodnie wybrać dowolny inny numer. Poniższe polecenia odwołują się do tabeli po jej identyfikatorze (`table=1`); nazwa `vrack` służy jedynie do łatwiejszego odczytu później, na przykład za pomocą polecenia `ip route show table vrack`.
+Następnie musisz utworzyć nową trasę IP dla sieci vRack. Dodasz nową regułę ruchu (`1 vrack`), modyfikując plik w sposób pokazany poniżej:
+
 
 ```sh
-echo "1 vrack" | sudo tee -a /etc/iproute2/rt_tables
+sudo nano /usr/share/iproute2/rt_tables
+#
+# reserved values
+#
+255	local
+254	main
+253	default
+0	unspec
+#
+# local
+#
+#1	inr.ruhep
 1 vrack
 ```
 
