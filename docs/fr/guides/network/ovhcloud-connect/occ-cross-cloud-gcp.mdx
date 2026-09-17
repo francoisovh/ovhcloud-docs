@@ -4,9 +4,11 @@ description: "Connectez votre réseau Google Cloud à OVHcloud via OVHcloud Conn
 lastUpdated: 2026-07-30
 ---
 
+import Api from '@components/Api';
+
 ## Objectif
 
-OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux connexions avec les autres providers, la clé de service (appelée **clé d'appairage**, ou *pairing key*, dans la terminologie Google Cloud) est générée dans la console Google Cloud, puis renseignée côté OVHcloud pour provisionner la connexion.
+OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux connexions avec les autres providers, la clé de service (appelée **clé d'appairage**, ou *pairing key*, dans la terminologie Google Cloud) est générée dans la console Google Cloud, puis transmise à OVHcloud via l'API pour provisionner la connexion.
 
 **Dans ce guide, vous allez apprendre à :**
 
@@ -21,6 +23,7 @@ OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3
 - Un projet Google Cloud disposant d'un réseau VPC et d'un Cloud Router, dans une région accessible depuis le PoP OVHcloud que vous visez
 - Un accès à votre <ManagerLink to="/">espace client OVHcloud</ManagerLink>
 - Un accès à la [console Google Cloud](https://console.cloud.google.com/)
+- Un accès aux <ApiLink>API OVHcloud</ApiLink>, avec des credentials créés en suivant le guide [Premiers pas avec les API OVHcloud](/guides/manage-and-operate/api/first-steps)
 
 ## Introduction
 
@@ -77,8 +80,6 @@ La connexion repose sur les paramètres fixes suivants :
 
 Dans la [console Google Cloud](https://console.cloud.google.com/), créez un **rattachement de VLAN Partner Interconnect** sur votre Cloud Router, dans la région accessible depuis le PoP OVHcloud que vous visez. Google génère alors une **clé d'appairage** pour ce rattachement. Cochez l'option d'activation automatique afin de ne pas avoir à revenir dans la console Google Cloud une fois la connexion provisionnée par OVHcloud.
 
-{/* DRAFT: À documenter — ajouter le chemin de navigation exact dans la console Google Cloud (Network Connectivity > Interconnect > VLAN attachments > Create), les sélections Cloud Router / région / capacité, le libellé exact de l'option d'activation automatique, et l'emplacement où s'affiche la clé d'appairage. */}
-
 La clé d'appairage utilise le format suivant :
 
 ```text
@@ -111,9 +112,20 @@ OVHcloud n'émet aucune clé de service pour les connexions avec Google Cloud. L
 
 ### Étape 3 - Transmettre la clé d'appairage à OVHcloud <a name="step-3"></a>
 
-Transmettez la clé d'appairage à OVHcloud depuis votre espace client OVHcloud ou via l'API OVHcloud, afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
+Une fois votre service OVHcloud Connect livré, transmettez la clé d'appairage via l'API OVHcloud, afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
 
-{/* DRAFT: À vérifier — la clé est transmise via l'espace client ou l'API (source : spécification de service). Confirmer l'écran et le champ exacts, et si elle est transmise avec la commande ou après livraison. */}
+<Api version="v1" section="/ovhCloudConnect" method="POST" route={"/ovhCloudConnect/\{serviceName\}/pairingKey"} />
+
+| Paramètre | Description |
+|---|---|
+| `serviceName` | L'UUID de votre service OVHcloud Connect. |
+| `pairingKey` | La clé d'appairage générée dans Google Cloud à l'[étape 1](#step-1). |
+
+L'appel retourne une tâche. OVHcloud consomme ensuite la clé et provisionne la connexion, comme décrit à l'[étape 4](#step-4).
+
+:::info
+La clé d'appairage ne se saisit pas dans l'espace client OVHcloud : la section OVHcloud Connect ne comporte aucun champ prévu à cet effet. Utilisez l'appel API ci-dessus.
+:::
 
 ### Étape 4 - OVHcloud provisionne la connexion <a name="step-4"></a>
 
