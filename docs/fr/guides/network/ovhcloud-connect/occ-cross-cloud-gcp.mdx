@@ -5,15 +5,17 @@ lastUpdated: 2026-07-30
 ---
 
 import Api from '@components/Api';
+import { Tab, Tabs } from '@rspress/core/theme';
 
 ## Objectif
 
-OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux connexions avec les autres providers, la clé de service (appelée **clé d'appairage**, ou *pairing key*, dans la terminologie Google Cloud) est générée dans la console Google Cloud, puis transmise à OVHcloud via l'API pour provisionner la connexion.
+OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3 entre votre réseau Google Cloud et votre vRack OVHcloud, via Google Cloud Partner Interconnect. Le trafic circule sur un lien dédié plutôt que sur l'Internet public. Contrairement aux connexions avec les autres providers, la clé de service (appelée **clé d'appairage**, ou *pairing key*, dans la terminologie Google Cloud) est générée dans la console Google Cloud, puis transmise à OVHcloud pour provisionner la connexion.
 
 **Dans ce guide, vous allez apprendre à :**
 
 - Créer un rattachement de VLAN Partner Interconnect et générer une clé d'appairage dans Google Cloud.
 - Commander le service OVHcloud Connect pour une connexion Google.
+- Associer votre service à un vRack.
 - Transmettre la clé d'appairage à OVHcloud afin que la connexion soit provisionnée.
 - Vérifier le circuit, la configuration du point de présence (PoP) et la session BGP obtenus à l'issue du provisionnement.
 
@@ -23,7 +25,7 @@ OVHcloud Connect Cross Cloud avec GCP établit une connexion privée de niveau 3
 - Un projet Google Cloud disposant d'un réseau VPC et d'un Cloud Router, dans une région accessible depuis le PoP OVHcloud que vous visez
 - Un accès à votre <ManagerLink to="/">espace client OVHcloud</ManagerLink>
 - Un accès à la [console Google Cloud](https://console.cloud.google.com/)
-- Un accès aux <ApiLink>API OVHcloud</ApiLink>, avec des credentials créés en suivant le guide [Premiers pas avec les API OVHcloud](/guides/manage-and-operate/api/first-steps)
+- Si vous transmettez la clé d'appairage via l'API : un accès aux <ApiLink>API OVHcloud</ApiLink>, avec des credentials créés en suivant le guide [Premiers pas avec les API OVHcloud](/guides/manage-and-operate/api/first-steps)
 
 ## Introduction
 
@@ -41,9 +43,9 @@ Deux caractéristiques la distinguent d'une connexion OVHcloud Connect Provider 
 - [Fonctionnement](#how-it-works)
 - [Étape 1 - Créer le rattachement de VLAN et la clé d'appairage dans Google Cloud](#step-1)
 - [Étape 2 - Commander OVHcloud Connect pour une connexion Google](#step-2)
-- [Étape 3 - Transmettre la clé d'appairage à OVHcloud](#step-3)
-- [Étape 4 - OVHcloud provisionne la connexion](#step-4)
-- [Étape 5 - Associer un vRack et vérifier la configuration](#step-5)
+- [Étape 3 - Associer un vRack à votre service](#step-3)
+- [Étape 4 - Transmettre la clé d'appairage à OVHcloud](#step-4)
+- [Étape 5 - OVHcloud provisionne la connexion](#step-5)
 - [Étape 6 - Vérifier la session BGP et le routage](#step-6)
 - [Limitations](#limitations)
 - [Dépannage](#troubleshooting)
@@ -110,9 +112,28 @@ Depuis la [page produit OVHcloud Connect](/links/network/ovhcloud-connect), comm
 OVHcloud n'émet aucune clé de service pour les connexions avec Google Cloud. Le service est activé à l'aide de la clé d'appairage générée à l'étape précédente.
 :::
 
-### Étape 3 - Transmettre la clé d'appairage à OVHcloud <a name="step-3"></a>
+### Étape 3 - Associer un vRack à votre service <a name="step-3"></a>
 
-Une fois votre service OVHcloud Connect livré, transmettez la clé d'appairage via l'API OVHcloud, afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
+Lorsque votre service est au statut `active`, associez-le à un vRack. Effectuez cette opération avant de transmettre la clé d'appairage : une connexion Google ne peut pas être associée à une clé tant qu'aucun vRack n'est associé.
+
+Connectez-vous à votre <ManagerLink to="/">espace client OVHcloud</ManagerLink>, accédez à la section <code className="action">Bare Metal Cloud</code> et cliquez sur <code className="action">Network</code>. Ouvrez <code className="action">OVHcloud Connect</code> et sélectionnez votre service.
+
+Cliquez sur le bouton <code className="action">Associer un vRack</code> et sélectionnez un vRack existant dans le menu déroulant. Un message confirme l'association.
+
+Pour plus d'informations, consultez le guide [Mise en service de OVHcloud Connect Provider depuis l'espace client OVHcloud](/guides/network/ovhcloud-connect/occ-provider-control-panel).
+
+:::warning
+La dissociation ultérieure du vRack retire également la clé d'association Google du service.
+:::
+
+### Étape 4 - Transmettre la clé d'appairage à OVHcloud <a name="step-4"></a>
+
+Transmettez la clé d'appairage afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
+
+Vous pouvez effectuer cette opération via l'API OVHcloud ou depuis l'espace client OVHcloud, dans la nouvelle console.
+
+<Tabs>
+  <Tab label="API OVHcloud">
 
 <Api version="v1" section="/ovhCloudConnect" method="POST" route={"/ovhCloudConnect/\{serviceName\}/pairingKey"} />
 
@@ -121,13 +142,25 @@ Une fois votre service OVHcloud Connect livré, transmettez la clé d'appairage 
 | `serviceName` | L'UUID de votre service OVHcloud Connect. |
 | `pairingKey` | La clé d'appairage générée dans Google Cloud à l'[étape 1](#step-1). |
 
-L'appel retourne une tâche. OVHcloud consomme ensuite la clé et provisionne la connexion, comme décrit à l'[étape 4](#step-4).
+L'appel retourne une tâche.
+
+  </Tab>
+  <Tab label="Espace client (nouvelle console)">
+
+La clé d'appairage se saisit uniquement dans la nouvelle console. Ouvrez la <ManagerLink to="/beta/#/network/cloud-connect">nouvelle console de l'espace client OVHcloud</ManagerLink> et sélectionnez votre service.
+
+Dans l'onglet <code className="action">Vue d'ensemble</code>, cliquez sur <code className="action">Associer une clé</code>, renseignez votre clé dans le champ <code className="action">Clé d'association (pairing key)</code>, puis cliquez sur <code className="action">Associer</code>.
+
+Un message confirme la prise en compte de la clé.
 
 :::info
-La clé d'appairage ne se saisit pas dans l'espace client OVHcloud : la section OVHcloud Connect ne comporte aucun champ prévu à cet effet. Utilisez l'appel API ci-dessus.
+Si le bouton <code className="action">Associer une clé</code> est grisé, aucun vRack n'est encore associé au service. Effectuez d'abord l'[étape 3](#step-3).
 :::
 
-### Étape 4 - OVHcloud provisionne la connexion <a name="step-4"></a>
+  </Tab>
+</Tabs>
+
+### Étape 5 - OVHcloud provisionne la connexion <a name="step-5"></a>
 
 Dès qu'OVHcloud reçoit votre clé d'appairage, la connexion est provisionnée automatiquement :
 
@@ -135,30 +168,16 @@ Dès qu'OVHcloud reçoit votre clé d'appairage, la connexion est provisionnée 
 2. Le circuit est créé côté OVHcloud.
 3. La configuration PoP de niveau 3 est appliquée automatiquement, avec l'ASN `16550` côté Google et l'ASN `65509` côté OVHcloud.
 
-Pendant le provisionnement, le statut du service est `doing`. Une fois le circuit provisionné, le statut passe à `active`.
+Pendant le provisionnement, le statut du service est `doing` et le champ `Circuit` de votre service indique que l'association est en cours. Une fois le circuit provisionné, le statut passe à `active`.
 
-:::info
-Pour une connexion Google, la configuration du PoP est créée uniquement par ce processus de provisionnement. Vous ne l'ajoutez pas manuellement, et il n'y a pas de clé de service à régénérer ou à renvoyer.
-:::
-
-### Étape 5 - Associer un vRack et vérifier la configuration <a name="step-5"></a>
-
-Lorsque votre solution est au statut `active`, associez-la à un vRack et vérifiez sa configuration.
-
-Connectez-vous à votre <ManagerLink to="/">espace client OVHcloud</ManagerLink>, accédez à la section <code className="action">Bare Metal Cloud</code> et cliquez sur <code className="action">Network</code>. Ouvrez <code className="action">OVHcloud Connect</code> et sélectionnez votre solution.
-
-#### Associer un vRack
-
-Cliquez sur le bouton <code className="action">Associer un vRack</code> et sélectionnez un vRack existant dans le menu déroulant. Un message confirme l'association.
-
-Pour plus d'informations, consultez le guide [Mise en service de OVHcloud Connect Provider depuis l'espace client OVHcloud](/guides/network/ovhcloud-connect/occ-provider-control-panel).
+Si votre service indique qu'une action est requise dans la console Google Cloud, activez-y le rattachement de VLAN. Cette opération est inutile si vous avez coché l'option d'activation automatique à l'[étape 1](#step-1).
 
 #### Vérifier la configuration du PoP
 
-Pour une connexion Google, la `configuration PoP` est de niveau 3 et est créée automatiquement lors de la consommation de votre clé d'appairage. Vous pouvez la consulter, mais vous ne devez pas l'ajouter ni la supprimer manuellement.
+Pour une connexion Google, la `configuration PoP` est de niveau 3 et est créée automatiquement lors de la consommation de votre clé d'appairage. Vous pouvez la consulter, mais vous ne devez pas l'ajouter ni la supprimer manuellement. Contrairement à une connexion Provider standard, il n'y a pas de clé de service à régénérer ou à renvoyer.
 
 :::warning
-N'ajoutez pas et ne supprimez pas manuellement la configuration du PoP d'une connexion Google, que ce soit depuis l'espace client ou l'API OVHcloud. Cette configuration est gérée automatiquement. Pour la supprimer, résiliez la connexion — voir [Limitations](#limitations).
+N'ajoutez ni ne supprimez manuellement la configuration PoP d'une connexion Google, que ce soit depuis l'espace client ou via l'API OVHcloud. Cette configuration est gérée automatiquement : elle est supprimée lorsque vous dissociez la clé d'appairage ou que vous résiliez la connexion. Consultez les [limitations](#limitations).
 :::
 
 ### Étape 6 - Vérifier la session BGP et le routage <a name="step-6"></a>
@@ -181,7 +200,7 @@ Pour lancer un diagnostic depuis l'espace client OVHcloud, consultez le guide [C
 |---|---|
 | Niveau 3 uniquement | Une connexion Google prend en charge uniquement le niveau 3 (BGP). La couche 2 n'est pas disponible. |
 | Configuration PoP automatique | Une seule configuration PoP est créée par connexion, automatiquement lors de la consommation de la clé d'appairage. Elle ne peut pas être ajoutée ni supprimée manuellement depuis l'espace client ou l'API OVHcloud. |
-| Suppression de la configuration PoP | La configuration du PoP est supprimée uniquement lors de la résiliation de la connexion. Il n'existe pas d'action autonome permettant de supprimer cette configuration pour une connexion Google. |
+| Suppression de la configuration PoP | La configuration PoP est supprimée lorsque vous dissociez la clé d'appairage (<code className="action">Dissocier la clé</code> dans la nouvelle console) ou lorsque vous résiliez la connexion. La dissociation du vRack retire également la clé. Le service n'est pas résilié et peut être associé de nouveau à Google. |
 | ASN fixes | Le côté Google utilise l'ASN `16550` et le côté OVHcloud l'ASN `65509`. Ces valeurs sont définies par le processus de provisionnement et ne sont pas personnalisables. |
 | Nombre maximal de préfixes BGP | Jusqu'à `100` préfixes peuvent être annoncés par session BGP, comme pour toute connexion OVHcloud Connect de niveau 3. |
 | Surréservation | L'interconnexion respecte la politique de surréservation 1:2 de Google. |

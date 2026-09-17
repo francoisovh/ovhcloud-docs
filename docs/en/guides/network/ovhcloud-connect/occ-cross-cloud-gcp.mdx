@@ -5,15 +5,17 @@ lastUpdated: 2026-07-30
 ---
 
 import Api from '@components/Api';
+import { Tab, Tabs } from '@rspress/core/theme';
 
 ## Objective
 
-OVHcloud Connect Cross Cloud with GCP establishes a private Layer 3 connection between your Google Cloud network and your OVHcloud vRack, over Google Cloud Partner Interconnect. Traffic flows across a dedicated link instead of the public Internet. Unlike connections with other providers, the service key (named **pairing key** in Google Cloud terminology) is generated in the Google Cloud console, then submitted to OVHcloud through the API to provision the connection.
+OVHcloud Connect Cross Cloud with GCP establishes a private Layer 3 connection between your Google Cloud network and your OVHcloud vRack, over Google Cloud Partner Interconnect. Traffic flows across a dedicated link instead of the public Internet. Unlike connections with other providers, the service key (named **pairing key** in Google Cloud terminology) is generated in the Google Cloud console, then submitted to OVHcloud to provision the connection.
 
 **In this guide, you will learn how to:**
 
 - Create a Partner Interconnect VLAN attachment and generate a pairing key in Google Cloud.
 - Order the OVHcloud Connect service for a Google connection.
+- Attach your service to a vRack.
 - Provide the pairing key to OVHcloud so the connection can be provisioned.
 - Verify the resulting circuit, Point-of-Presence (PoP) configuration, and BGP session.
 
@@ -23,7 +25,7 @@ OVHcloud Connect Cross Cloud with GCP establishes a private Layer 3 connection b
 - A Google Cloud project with an existing VPC network and a Cloud Router, in a region reachable from your target OVHcloud PoP
 - Access to the <ManagerLink to="/">OVHcloud Control Panel</ManagerLink>
 - Access to the [Google Cloud console](https://console.cloud.google.com/)
-- Access to the <ApiLink>OVHcloud API</ApiLink>, with credentials created by following the [First Steps with the OVHcloud APIs](/guides/manage-and-operate/api/first-steps) guide
+- If you submit the pairing key with the API: access to the <ApiLink>OVHcloud API</ApiLink>, with credentials created by following the [First Steps with the OVHcloud APIs](/guides/manage-and-operate/api/first-steps) guide
 
 ## Introduction
 
@@ -41,9 +43,9 @@ Two characteristics set it apart from a standard OVHcloud Connect Provider conne
 - [How it works](#how-it-works)
 - [Step 1 — Create the VLAN attachment and pairing key in Google Cloud](#step-1)
 - [Step 2 — Order OVHcloud Connect for a Google connection](#step-2)
-- [Step 3 — Provide the pairing key to OVHcloud](#step-3)
-- [Step 4 — OVHcloud provisions the connection](#step-4)
-- [Step 5 — Associate a vRack and review the configuration](#step-5)
+- [Step 3 — Attach a vRack to your service](#step-3)
+- [Step 4 — Provide the pairing key to OVHcloud](#step-4)
+- [Step 5 — OVHcloud provisions the connection](#step-5)
 - [Step 6 — Verify the BGP session and routing](#step-6)
 - [Limitations](#limitations)
 - [Troubleshooting](#troubleshooting)
@@ -110,9 +112,28 @@ From the [OVHcloud Connect product page](/links/network/ovhcloud-connect), order
 OVHcloud does not issue any service key for connections with Google Cloud. Instead, the service is activated using the pairing key you generated in the previous step.
 :::
 
-### Step 3 — Provide the pairing key to OVHcloud <a name="step-3"></a>
+### Step 3 — Attach a vRack to your service <a name="step-3"></a>
 
-Once your OVHcloud Connect service is delivered, submit the pairing key through the OVHcloud API so that the virtual circuit towards Google can be deployed. Copy the key exactly as Google issued it, keeping the full `{uuid}/{region}/{availabilityDomain}` string intact.
+When your service shows as `active`, attach it to a vRack. Do this before you provide the pairing key: a Google connection cannot be associated with a key until a vRack is attached.
+
+Log in to the <ManagerLink to="/">OVHcloud Control Panel</ManagerLink>, go to the <code className="action">Bare Metal Cloud</code> section and click <code className="action">Network</code>. Open <code className="action">OVHcloud Connect</code> and select your service.
+
+Click the <code className="action">Attach a vRack</code> button and select an existing vRack from the drop-down menu. A message confirms the association.
+
+For more information, refer to the [Installation of OVHcloud Connect Provider from the OVHcloud Control Panel](/guides/network/ovhcloud-connect/occ-provider-control-panel) guide.
+
+:::warning
+Detaching the vRack later also removes the Google association key from the service.
+:::
+
+### Step 4 — Provide the pairing key to OVHcloud <a name="step-4"></a>
+
+Submit the pairing key so that the virtual circuit towards Google can be deployed. Copy the key exactly as Google issued it, keeping the full `{uuid}/{region}/{availabilityDomain}` string intact.
+
+You can do this with the OVHcloud API, or from the OVHcloud Control Panel in the new console.
+
+<Tabs>
+  <Tab label="OVHcloud API">
 
 <Api version="v1" section="/ovhCloudConnect" method="POST" route={"/ovhCloudConnect/\{serviceName\}/pairingKey"} />
 
@@ -121,13 +142,25 @@ Once your OVHcloud Connect service is delivered, submit the pairing key through 
 | `serviceName` | The UUID of your OVHcloud Connect service. |
 | `pairingKey` | The pairing key generated in Google Cloud in [Step 1](#step-1). |
 
-The call returns a task. OVHcloud then consumes the key and provisions the connection, as described in [Step 4](#step-4).
+The call returns a task.
+
+  </Tab>
+  <Tab label="Control Panel (new console)">
+
+The pairing key can only be entered in the new console. Open the <ManagerLink to="/beta/#/network/cloud-connect">new OVHcloud Control Panel console</ManagerLink> and select your service.
+
+On the <code className="action">Overview</code> tab, click <code className="action">Associate a key</code>, enter your key in the <code className="action">Association key (pairing key)</code> field, then click <code className="action">Associate</code>.
+
+A message confirms that the key has been registered.
 
 :::info
-The pairing key is not entered in the OVHcloud Control Panel: the OVHcloud Connect section has no field for it. Use the API call above.
+If <code className="action">Associate a key</code> is greyed out, no vRack is attached to the service yet. Complete [Step 3](#step-3) first.
 :::
 
-### Step 4 — OVHcloud provisions the connection <a name="step-4"></a>
+  </Tab>
+</Tabs>
+
+### Step 5 — OVHcloud provisions the connection <a name="step-5"></a>
 
 Once OVHcloud receives your pairing key, it provisions the connection automatically:
 
@@ -135,30 +168,16 @@ Once OVHcloud receives your pairing key, it provisions the connection automatica
 2. The circuit is created on the OVHcloud side.
 3. The Layer 3 PoP configuration is applied automatically, using ASN `16550` on the Google side and ASN `65509` on the OVHcloud side.
 
-While provisioning is in progress, the service status is `doing`. When the circuit is provisioned, the status changes to `active`.
+While provisioning is in progress, the service status is `doing` and the `Circuit` field of your service shows the pairing as in progress. When the circuit is provisioned, the status changes to `active`.
 
-:::info
-For a Google connection, the PoP configuration is created only by this provisioning flow. You do not add it manually, and there is no service key to regenerate or resend.
-:::
-
-### Step 5 — Associate a vRack and review the configuration <a name="step-5"></a>
-
-When your solution shows as `active`, associate it with a vRack and review its configuration.
-
-Log in to the <ManagerLink to="/">OVHcloud Control Panel</ManagerLink>, go to the <code className="action">Bare Metal Cloud</code> section and click <code className="action">Network</code>. Open <code className="action">OVHcloud Connect</code> and select your solution.
-
-#### Associate a vRack
-
-Click the <code className="action">Attach a vRack</code> button and select an existing vRack from the drop-down menu. A message confirms the association.
-
-For more information, refer to the [Installation of OVHcloud Connect Provider from the OVHcloud Control Panel](/guides/network/ovhcloud-connect/occ-provider-control-panel) guide.
+If your service reports that an action is required in the Google Cloud console, activate the VLAN attachment there. This is not needed if you ticked the automatic activation option in [Step 1](#step-1).
 
 #### Review the PoP configuration
 
-For a Google connection, the `PoP configuration` is Layer 3 and is created automatically when your pairing key is consumed. Review it, but do not add or delete it manually.
+For a Google connection, the `PoP configuration` is Layer 3 and is created automatically when your pairing key is consumed. Review it, but do not add or delete it manually. Unlike a standard Provider connection, there is no service key to regenerate or resend.
 
 :::warning
-Do not add or delete the PoP configuration of a Google connection manually, from either the Control Panel or the OVHcloud API. The configuration is managed automatically. To remove it, cancel the connection — see [Limitations](#limitations).
+Do not add or delete the PoP configuration of a Google connection manually, from either the Control Panel or the OVHcloud API. The configuration is managed automatically: it is removed when you dissociate the pairing key or cancel the connection — see [Limitations](#limitations).
 :::
 
 ### Step 6 — Verify the BGP session and routing <a name="step-6"></a>
@@ -181,7 +200,7 @@ For diagnostics from the OVHcloud Control Panel, see [How to initiate a diagnost
 |---|---|
 | Layer 3 only | A Google connection supports Layer 3 (BGP) only. Layer 2 is not available. |
 | Automatic PoP configuration | Exactly one PoP configuration is created per connection, automatically when the pairing key is consumed. It cannot be added or deleted manually from the Control Panel or the OVHcloud API. |
-| Removing the PoP configuration | The PoP configuration is removed only when the connection is cancelled. There is no standalone unconfigure action for a Google connection. |
+| Removing the PoP configuration | The PoP configuration is removed when you dissociate the pairing key (<code className="action">Dissociate the key</code> in the new console) or when the connection is cancelled. Detaching the vRack also removes the key. The service itself is not terminated and can be associated with Google again. |
 | Fixed ASNs | The Google side uses ASN `16550` and the OVHcloud side uses ASN `65509`. These values are set by the provisioning flow and are not customisable. |
 | BGP maximum prefixes | Up to `100` prefixes can be announced per BGP session, as for any OVHcloud Connect Layer 3 connection. |
 | Oversubscription | The interconnect follows Google's 1:2 oversubscription policy. |
