@@ -130,7 +130,7 @@ La dissociation ultérieure du vRack retire également la clé d'association Goo
 
 Transmettez la clé d'appairage afin que le circuit virtuel vers Google soit déployé. Copiez la clé exactement telle que Google l'a émise, en conservant l'intégralité de la chaîne `{uuid}/{region}/{availabilityDomain}`.
 
-Vous pouvez effectuer cette opération via l'API OVHcloud ou depuis l'espace client OVHcloud, dans la nouvelle console.
+Vous pouvez effectuer cette opération via l'API OVHcloud ou depuis la version beta de l'espace client OVHcloud.
 
 <Tabs>
   <Tab label="API OVHcloud">
@@ -145,9 +145,9 @@ Vous pouvez effectuer cette opération via l'API OVHcloud ou depuis l'espace cli
 L'appel retourne une tâche.
 
   </Tab>
-  <Tab label="Espace client (nouvelle console)">
+  <Tab label="Espace client OVHcloud (beta)">
 
-La clé d'appairage se saisit uniquement dans la nouvelle console. Ouvrez la <ManagerLink to="/beta/#/network/cloud-connect">nouvelle console de l'espace client OVHcloud</ManagerLink> et sélectionnez votre service.
+La clé d'appairage se saisit uniquement dans la version beta de l'espace client. Ouvrez l'<ManagerLink to="/beta/#/network/cloud-connect">espace client OVHcloud (beta)</ManagerLink> et sélectionnez votre service.
 
 Dans l'onglet <code className="action">Vue d'ensemble</code>, cliquez sur <code className="action">Associer une clé</code>, renseignez votre clé dans le champ <code className="action">Clé d'association (pairing key)</code>, puis cliquez sur <code className="action">Associer</code>.
 
@@ -200,7 +200,7 @@ Pour lancer un diagnostic depuis l'espace client OVHcloud, consultez le guide [C
 |---|---|
 | Niveau 3 uniquement | Une connexion Google prend en charge uniquement le niveau 3 (BGP). La couche 2 n'est pas disponible. |
 | Configuration PoP automatique | Une seule configuration PoP est créée par connexion, automatiquement lors de la consommation de la clé d'appairage. Elle ne peut pas être ajoutée ni supprimée manuellement depuis l'espace client ou l'API OVHcloud. |
-| Suppression de la configuration PoP | La configuration PoP est supprimée lorsque vous dissociez la clé d'appairage (<code className="action">Dissocier la clé</code> dans la nouvelle console) ou lorsque vous résiliez la connexion. La dissociation du vRack retire également la clé. Le service n'est pas résilié et peut être associé de nouveau à Google. |
+| Suppression de la configuration PoP | La configuration PoP est supprimée lorsque vous dissociez la clé d'appairage (<code className="action">Dissocier la clé</code> dans l'espace client beta) ou lorsque vous résiliez la connexion. La dissociation du vRack retire également la clé. Le service n'est pas résilié et peut être associé de nouveau à Google. |
 | ASN fixes | Le côté Google utilise l'ASN `16550` et le côté OVHcloud l'ASN `65509`. Ces valeurs sont définies par le processus de provisionnement et ne sont pas personnalisables. |
 | Nombre maximal de préfixes BGP | Jusqu'à `100` préfixes peuvent être annoncés par session BGP, comme pour toute connexion OVHcloud Connect de niveau 3. |
 | Surréservation | L'interconnexion respecte la politique de surréservation 1:2 de Google. |

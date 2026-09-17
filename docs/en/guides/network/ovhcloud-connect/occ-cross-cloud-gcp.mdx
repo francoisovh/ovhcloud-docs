@@ -130,7 +130,7 @@ Detaching the vRack later also removes the Google association key from the servi
 
 Submit the pairing key so that the virtual circuit towards Google can be deployed. Copy the key exactly as Google issued it, keeping the full `{uuid}/{region}/{availabilityDomain}` string intact.
 
-You can do this with the OVHcloud API, or from the OVHcloud Control Panel in the new console.
+You can do this with the OVHcloud API, or from the beta version of the OVHcloud Control Panel.
 
 <Tabs>
   <Tab label="OVHcloud API">
@@ -145,9 +145,9 @@ You can do this with the OVHcloud API, or from the OVHcloud Control Panel in the
 The call returns a task.
 
   </Tab>
-  <Tab label="Control Panel (new console)">
+  <Tab label="OVHcloud Control Panel (beta)">
 
-The pairing key can only be entered in the new console. Open the <ManagerLink to="/beta/#/network/cloud-connect">new OVHcloud Control Panel console</ManagerLink> and select your service.
+The pairing key can only be entered in the beta version of the Control Panel. Open the <ManagerLink to="/beta/#/network/cloud-connect">OVHcloud Control Panel (beta)</ManagerLink> and select your service.
 
 On the <code className="action">Overview</code> tab, click <code className="action">Associate a key</code>, enter your key in the <code className="action">Association key (pairing key)</code> field, then click <code className="action">Associate</code>.
 
@@ -200,7 +200,7 @@ For diagnostics from the OVHcloud Control Panel, see [How to initiate a diagnost
 |---|---|
 | Layer 3 only | A Google connection supports Layer 3 (BGP) only. Layer 2 is not available. |
 | Automatic PoP configuration | Exactly one PoP configuration is created per connection, automatically when the pairing key is consumed. It cannot be added or deleted manually from the Control Panel or the OVHcloud API. |
-| Removing the PoP configuration | The PoP configuration is removed when you dissociate the pairing key (<code className="action">Dissociate the key</code> in the new console) or when the connection is cancelled. Detaching the vRack also removes the key. The service itself is not terminated and can be associated with Google again. |
+| Removing the PoP configuration | The PoP configuration is removed when you dissociate the pairing key (<code className="action">Dissociate the key</code> in the beta Control Panel) or when the connection is cancelled. Detaching the vRack also removes the key. The service itself is not terminated and can be associated with Google again. |
 | Fixed ASNs | The Google side uses ASN `16550` and the OVHcloud side uses ASN `65509`. These values are set by the provisioning flow and are not customisable. |
 | BGP maximum prefixes | Up to `100` prefixes can be announced per BGP session, as for any OVHcloud Connect Layer 3 connection. |
 | Oversubscription | The interconnect follows Google's 1:2 oversubscription policy. |
