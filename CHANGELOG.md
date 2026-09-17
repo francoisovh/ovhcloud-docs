@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.09.17
+
+### Fixes
+- **cpnav,fragments:** pin blocks to English on untranslated guides (#800)
+
+### Documentation
+- 36 guides updated across de, en, es, it, pl, pt
+
 ## 2026.09.16
 
 ### Features
